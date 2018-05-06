@@ -47,3 +47,8 @@ Los sprites utilizados en este juego e obtendrán de los siguientes enlaces:
 
 **Derrota:** Link muere. 
 
+# Integrantes
+* Lidia	Concepción Echeverría.
+* Jose Javier Cortés Tejada.
+* Pedro David González Vázquez.
+* Manuel Hidalgo Lorente
