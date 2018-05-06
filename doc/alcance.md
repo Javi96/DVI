@@ -1,11 +1,49 @@
-![Logo The Legend of Zelda](img/Logo.gif)
+<div style="text-align:center"><img src ='img/game.gif' /></div>
 
+**Fecha de lanzamiento:** 21 de noviembre de 1991.
 
-**Fecha de lanzamiento:** 21 de febrero de 1986.
-
-**Plataforma:** Nintendo Entertainment System.
+**Plataforma:** Super Nintendo, Game Boy Advance, Wii, Nintendo 3DS, Wii U.
 
 **Distribuidor:** Nintendo.
 
-**Impacto:** El título generó enormes ventas para Nintendo, pues se llegaron a vender 6,5 millones de copias alrededor del mundo. Asimismo, fue el primer título para la NES en alcanzar ventas superiores al millón de copias.
-Cabe destacar que es considerado como el **_precursor espiritual_** del género de rol (RPG).
+**Impacto:** A nivel comercial fue uno de los juegos más vendidos de la SNES con cerca de 4,61 millones de copias. Asímismo es uno de los videojuegos clásicos de la saga que más características reune respecto a los actuales como las mazmorras multinivel, los entornos dinámicos o la Espada Maestra.
+
+**Curiosidades:** Es el primer juego en que Link grita _"Hyaaaah"_ .
+
+
+# Niveles del juego
+## Nivel 1: Overworld
+Se compone de el poblado inicial y de diversas zonas con enemigos con los que Link tendrá que abrirse paso y recolectar la bomba que le permitirá entrar al castillo de Ganon.
+
+## Nivel 2: Castillo de Ganon
+Varias salas con varios enemigos donde Link tendrá que utilizar su astucia para poder resolver los malignos puzzles de Ganon y así enfrentarte a él.
+
+# Sprites
+Los sprites utilizados en este juego e obtendrán de los siguientes enlaces:
+
+* https://www.spriters-resource.com/snes/legendofzeldaalinktothepast/
+
+* https://github.com/solarus-games/solarus-alttp-pack/tree/master/data
+
+# Mecánicas con los que contará el juego
+* **Combate:** Link atacará en las casillas adyacentes con su espada en dirección que mire Link.
+
+* **Objetos:** Link puede coger pociones que se utilizarán de forma automatica para recuperar salud entre otros como las vasijas.
+
+* **Corazones:** Link y los enemigos tienen cierto número de "puntos de impacto" que pueden soportar antes de morir.
+
+* **Interacción con escenario:** Levantar arbustos, rocas, abrir cofres, abrir puertas, leer carteles, ...
+
+* **NPCs:** Hablar con los hyrulianos para obtener información.
+
+* **Armería:** Poder cambiar tus diversas armas.
+
+* **Interfaz:** La armería, puntuación (rupias), salud, etc.
+
+* **Puzzles** 
+
+# Condiciones de finalización.
+**Victoria:** Consigues salvar a Zelda Williams (no a Link).
+
+**Derrota:** Link muere. 
+
