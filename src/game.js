@@ -11,10 +11,7 @@ window.addEventListener('load', function() {
         /**
          * Se ajusta la ventana.
          */
-        .setup({
-            width: 800,
-            height: 800
-        })
+        .setup({ maximize: true })
         /**
          * Se le añade funcionalidad.
          */
