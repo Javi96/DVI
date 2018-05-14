@@ -2,12 +2,12 @@ window.addEventListener('load', function() {
     /**
      * Variable principal del Quintus.
      */
-    var Q = Quintus({ audioSupported: ['mp3', 'ogg'] })
+    var Q = Quintus( /*{ audioSupported: ['mp3', 'ogg'] }*/ )
         /**
          * Se añaden los módulos necesarios para el funcionamiento de
          * la aplicación.
          */
-        .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX, Audio')
+        .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX')
         /**
          * Se ajusta la ventana.
          */
@@ -15,16 +15,16 @@ window.addEventListener('load', function() {
         /**
          * Se le añade funcionalidad.
          */
-        .controls().touch().enableSound();
+        .controls().touch(); /*.enableSound();*/
     /**
-     * Cargamos los diversos componenentes que utilizaremos durante el juego.
+     * Cargamos los diversos componentes que utilizaremos durante el juego.
      */
     loadLevel1(Q);
-    
+
     /**
      * Cargamos los ficheros que necesitamos para el juego.
      */
-    Q.loadTMX('city.tmx', function() {
+    Q.loadTMX('house_link.tmx', function() {
         Q.stageScene('level1');
     });
 });
