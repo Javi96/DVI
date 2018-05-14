@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="28" height="22" tilewidth="8" tileheight="8" infinite="1" nextobjectid="1">
- <tileset firstgid="1" source="light_world.tiles.tsx"/>
- <tileset firstgid="6145" source="light_world.entities.tsx"/>
+ <tileset firstgid="1" name="light_world.tiles" tilewidth="8" tileheight="8" tilecount="6144" columns="96">
+    <image source="../images/light_world.tiles.png" width="768" height="512"/>
+ <tileset firstgid="6145" name="light_world.entities" tilewidth="8" tileheight="8" tilecount="1760" columns="40">
+ <image source="../images/light_world.entities.png" width="320" height="352"/>
  <group name="Terreno">
   <layer name="Agua" width="28" height="22">
    <data encoding="csv">
