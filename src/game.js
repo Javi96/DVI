@@ -16,18 +16,33 @@ window.addEventListener('load', function() {
          * Se le añade funcionalidad.
          */
         .controls().touch(); /*.enableSound();*/
+
+
+    Q.SPRITE_PLAYER = 1;
+    Q.SPRITE_ENEMY = 2;
     /**
      * Cargamos los diversos componentes que utilizaremos durante el juego.
      */
     loadLevel1(Q);
+
+    loadEnemy(Q);
+
     loadLink(Q);
+
 
 
     /**
      * Cargamos los ficheros que necesitamos para el juego.
      */
-    Q.loadTMX('house_link.tmx, walking_tunic.png, walking_tunic.json', function() {
+
+    Q.loadTMX('house_link.tmx, walking_tunic.png, walking_tunic.json, ganon.png, ganon.json', function() {
         Q.compileSheets("walking_tunic.png", "walking_tunic.json");
+
+        Q.compileSheets("ganon.png", "ganon.json");
+
+        Q.animations("ganonAnim", {
+            walk: {frames: [5, 6], rate: 1/5, loop:true}
+        });
 
         Q.animations("linkAnim", {
             "walking_right": { frames: [0,1,2,3,4,5,6,7], rate: 1/8, loop: true },
@@ -35,4 +50,5 @@ window.addEventListener('load', function() {
               Q.stageScene('level1');
 
     });
+
 });

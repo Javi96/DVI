@@ -5,6 +5,11 @@ function loadLevel1(Q) {
     Q.scene('level1', function(stage) {
 
         Q.stageTMX('house_link.tmx', stage);
+
+        stage.insert(new Q.Ganon());
+
+
         stage.insert(new Q.player());
     })
 }
+
