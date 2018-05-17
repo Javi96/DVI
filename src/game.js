@@ -16,15 +16,30 @@ window.addEventListener('load', function() {
          * Se le añade funcionalidad.
          */
         .controls().touch(); /*.enableSound();*/
+
+
+    Q.SPRITE_PLAYER = 1;
+    Q.SPRITE_ENEMY = 2;
     /**
      * Cargamos los diversos componentes que utilizaremos durante el juego.
      */
     loadLevel1(Q);
+    loadEnemy(Q);
 
     /**
      * Cargamos los ficheros que necesitamos para el juego.
      */
-    Q.loadTMX('house_link.tmx', function() {
+    Q.loadTMX("house_link.tmx, ganon.png, ganon.json", function(){
+        Q.compileSheets("ganon.png", "ganon.json");
+
+        Q.animations("ganonAnim", {
+            walk: {frames: [5, 6], rate: 1/5, loop:true}
+        });
+
         Q.stageScene('level1');
-    });
+
+    })
+    
+
+
 });
