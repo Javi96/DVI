@@ -20,11 +20,19 @@ window.addEventListener('load', function() {
      * Cargamos los diversos componentes que utilizaremos durante el juego.
      */
     loadLevel1(Q);
+    loadLink(Q);
+
 
     /**
      * Cargamos los ficheros que necesitamos para el juego.
      */
-    Q.loadTMX('house_link.tmx', function() {
-        Q.stageScene('level1');
+    Q.loadTMX('house_link.tmx, walking_tunic.png, walking_tunic.json', function() {
+        Q.compileSheets("walking_tunic.png", "walking_tunic.json");
+
+        Q.animations("linkAnim", {
+            "walking_right": { frames: [0,1,2,3,4,5,6,7], rate: 1/8, loop: true },
+      });
+              Q.stageScene('level1');
+
     });
 });
