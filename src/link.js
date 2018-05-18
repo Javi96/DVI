@@ -1,5 +1,5 @@
 function loadLink(Q){
-    Q.Sprite.extend("player",{
+    Q.Sprite.extend("Player",{
         init:function(p){
             this._super(p, {
                 sheet: "link",
@@ -15,6 +15,7 @@ function loadLink(Q){
         },
         step:function(dt){
             this.play("walking_right");
+            console.log(this.p.x, this.p.y);
         }
     })
 }

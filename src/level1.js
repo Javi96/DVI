@@ -7,9 +7,6 @@ function loadLevel1(Q) {
         Q.stageTMX('house_link.tmx', stage);
 
         stage.insert(new Q.Ganon());
-
-
-        stage.insert(new Q.player());
     })
 }
 
