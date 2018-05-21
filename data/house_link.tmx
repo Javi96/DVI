@@ -14,6 +14,7 @@
  <layer name="Suelo" width="28" height="22">
   <properties>
    <property name="collision" type="bool" value="false"/>
+   <property name="type" type="int" value="0"/>
   </properties>
   <data>
    <tile/>
@@ -1881,7 +1882,7 @@
   </data>
  </layer>
  <objectgroup name="Link">
-  <object id="49" gid="6401" x="244.378" y="114.97" width="24" height="32" rotation="-1.44564">
+  <object id="49" gid="6401" x="100.378" y="78.97" width="24" height="32" rotation="-1.44564">
    <properties>
     <property name="Class" value="Player"/>
    </properties>
