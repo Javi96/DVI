@@ -14,12 +14,27 @@ Q.component("defaultEnemy", {
 	  
 	 	this.entity.add("2d, animation, tween");
 		this.entity.on("step",this,"step");
+		this.entity.on("bump.top,bump.left,bump.right,bump.bottom",this,"hit");
 	},
 
 	step: function(p){
 		var p = this.entity.p;
 		if(!p.dead){
 			this.entity.play("walk");
+		}
+	},
+
+	hit: function(col){
+		var p = this.entity.p;
+		if(col.obj.isA("player") && !col.obj.dead){
+			if(col.obj.sword){
+				col.obj.trigger("player.hit");
+			}else{
+				p.hp--;
+				if(p.hp == 0){
+					p.dead = true;
+				}
+			}
 		}
 	}
 })
@@ -30,7 +45,8 @@ Q.Sprite.extend("Ganon", {
 			sheet:"ganonWalk",
 			sprite:"ganonAnim",
 			x:10,
-			y:10
+			y:10,
+			hp: 1
 		})
 		this.add("defaultEnemy");
 	}
