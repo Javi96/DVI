@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="128" height="64" tilewidth="8" tileheight="8" infinite="0" nextobjectid="1">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="64" tilewidth="8" tileheight="8" infinite="0" nextobjectid="3">
  <tileset firstgid="1" name="casa_link_bank.png" tilewidth="8" tileheight="8" tilecount="352" columns="22">
   <image source="../images/casa_link_bank.png" width="176" height="128"/>
  </tileset>
- <imagelayer name="background" visible="0">
+ <tileset firstgid="353" name="walking_tunic" tilewidth="24" tileheight="32" tilecount="165" columns="11">
+  <image source="../images/walking_tunic.png" width="264" height="480"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Player"/>
+   </properties>
+  </tile>
+ </tileset>
+ <imagelayer name="background" locked="1">
   <image source="../images/casa_link.png" width="1025" height="512"/>
+  <properties>
+   <property name="collision" type="bool" value="false"/>
+   <property name="type" type="int" value="0"/>
+  </properties>
  </imagelayer>
  <layer name="ShoeBox Tile Grab" width="128" height="64">
+  <properties>
+   <property name="collision" type="bool" value="true"/>
+  </properties>
   <data>
    <tile gid="1"/>
    <tile gid="2"/>
@@ -8202,4 +8217,7 @@
    <tile gid="119"/>
   </data>
  </layer>
+ <objectgroup name="Link" locked="1">
+  <object id="2" gid="353" x="586" y="307" width="24" height="32"/>
+ </objectgroup>
 </map>

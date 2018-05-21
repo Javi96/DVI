@@ -15,7 +15,7 @@ function loadLink(Q){
         },
         step:function(dt){
 
-
+        	console.log(this.p.x + " " +this.p.y);
         	if(Q.inputs['up'] && !Q.inputs['left'] && !Q.inputs['right']){
 	        	this.play("walking_up");
 	        }else if(Q.inputs['down'] && !Q.inputs['left'] && !Q.inputs['right']){

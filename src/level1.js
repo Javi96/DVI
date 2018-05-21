@@ -4,9 +4,17 @@ function loadLevel1(Q) {
      */
     Q.scene('level1', function(stage) {
 
-        Q.stageTMX('house_link.tmx', stage);
+        Q.stageTMX('casa_link_map.tmx', stage);
 
         stage.insert(new Q.Ganon());
+
+        var player = Q("Player").first();
+
+        stage.add("viewport").follow(player, { x: true, y: true }, {
+            minY: 0,
+            maxY: 512,
+            minX: 0,
+            maxX: 1024,
+        });
     })
 }
-
