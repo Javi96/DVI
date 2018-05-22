@@ -35,9 +35,9 @@ window.addEventListener('load', function() {
      * Cargamos los ficheros que necesitamos para el juego.
      */
 
-    Q.loadTMX('house_link.tmx, casa_link_map.tmx, walking_tunic.png, walking_tunic.json, ganon.png, ganon.json', function() {
+    Q.loadTMX('house_link.tmx, casa_link_map.tmx, Link.png, Link.json, ganon.png, ganon.json', function() {
         
-        Q.compileSheets("walking_tunic.png", "walking_tunic.json");
+        Q.compileSheets("Link.png", "Link.json");
 
         Q.compileSheets("ganon.png", "ganon.json");
 
