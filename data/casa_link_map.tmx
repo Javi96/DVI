@@ -12,7 +12,7 @@
   </tile>
  </tileset>
  <imagelayer name="background" locked="1">
-  <image source="../images/casa_link.png" width="1025" height="512"/>
+  <image source="../images/casa_link.png" width="1024" height="512"/>
   <properties>
    <property name="collision" type="bool" value="false"/>
    <property name="type" type="int" value="0"/>
