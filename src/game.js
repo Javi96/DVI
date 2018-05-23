@@ -17,15 +17,17 @@ window.addEventListener('load', function() {
          */
         .controls().touch(); /*.enableSound();*/
 
-
-    Q.SPRITE_PLAYER = 1;
-    Q.SPRITE_ENEMY = 2;
+        Q.SPRITE_NONE = 0;
+        Q.SPRITE_PLAYER = 1;
+        Q.SPRITE_SWORD = 2;
     /**
      * Cargamos los diversos componentes que utilizaremos durante el juego.
      */
     loadLevel1(Q);
 
     loadEnemy(Q);
+
+    loadSword(Q);
 
     loadLink(Q);
 
@@ -35,11 +37,13 @@ window.addEventListener('load', function() {
      * Cargamos los ficheros que necesitamos para el juego.
      */
 
-    Q.loadTMX('house_link.tmx, casa_link_map.tmx, Link.png, Link.json, ganon.png, ganon.json', function() {
+    Q.loadTMX('house_link.tmx, casa_link_map.tmx, Link.png, Link.json, ganon.png, ganon.json, loading.sword3.png, loading.sword3.json', function() {
         
         Q.compileSheets("Link.png", "Link.json");
 
         Q.compileSheets("ganon.png", "ganon.json");
+
+        Q.compileSheets("loading.sword3.png", "loading.sword3.json")
 
         Q.animations("ganonAnim", {
             walk: {frames: [5, 6], rate: 1/5, loop:true}
