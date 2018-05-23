@@ -9,6 +9,7 @@ function loadLevel1(Q) {
         stage.insert(new Q.Ganon());
 
         var player = Q("Player").first();
+        var sword = stage.insert(new Q.Sword(), player);
 
         stage.add("viewport").follow(player, { x: true, y: true }, {
             minY: 0,

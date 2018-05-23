@@ -8,33 +8,29 @@ function loadLink(Q) {
                 y: 40,
                 gravity: 0,
                 stepDistance: 8, // should be tile size
-                stepDelay: 0.1 // seconds to delay before next step
+                stepDelay: 0.1, // seconds to delay before next step
+                points: [[-8, -5],[8, -5],[8, 5],[-8, 5]],
+                type: Q.SPRITE_PLAYER,
+                collisionMask : Q.SPRITE_NONE | Q.SPRITE_DEFAULT,
             });
             this.add('2d, stepControls, animation');
             //this.on("enemy.hit","enemyHit");
         },
         step: function(dt) {
+            dir = "walking";
+            if(Q.inputs['up'])
+                dir += "_up";
+            else if(Q.inputs['down'])
+                dir += "_down";
 
-            console.log(this.p.x + " " + this.p.y);
-            if (Q.inputs['up'] && !Q.inputs['left'] && !Q.inputs['right']) {
-                this.play('walking_up');
-            } else if (Q.inputs['down'] && !Q.inputs['left'] && !Q.inputs['right']) {
-                this.play('walking_down');
-            } else if (Q.inputs['right'] && !Q.inputs['up'] && !Q.inputs['down']) {
-                this.play('walking_right');
-            } else if (Q.inputs['left'] && !Q.inputs['up'] && !Q.inputs['down']) {
-                this.play('walking_left');
-            } else if (Q.inputs['up'] && Q.inputs['right']) {
-                this.play('walking_up_right');
-            } else if (Q.inputs['up'] && Q.inputs['left']) {
-                this.play('walking_up_left');
-            } else if (Q.inputs['down'] && Q.inputs['right']) {
-                this.play('walking_down_right');
-            } else if (Q.inputs['down'] && Q.inputs['left']) {
-                this.play('walking_down_left');
+            if(Q.inputs['left'])
+                dir += "_left";
+            else if(Q.inputs['right'])
+                dir += "_right";
+
+             if(dir !== "walking"){
+                this.play(dir);
             }
-
-
         }
     });
 
