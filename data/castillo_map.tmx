@@ -4,7 +4,7 @@
   <image source="../images/castillo_bank.png" width="176" height="184"/>
  </tileset>
  <imagelayer name="background" visible="0">
-  <image source="../images/castillo.png" width="1025" height="1024"/>
+  <image source="../images/castillo.png" width="1024" height="1024"/>
  </imagelayer>
  <layer name="ShoeBox Tile Grab" width="128" height="128">
   <data>
