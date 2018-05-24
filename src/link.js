@@ -18,18 +18,23 @@ function loadLink(Q) {
         },
         step: function(dt) {
             dir = "walking";
-            if(Q.inputs['up'])
+            if(Q.inputs['up']){
                 dir += "_up";
-            else if(Q.inputs['down'])
+            }
+            else if(Q.inputs['down']){
                 dir += "_down";
-
-            if(Q.inputs['left'])
+            }
+            if(Q.inputs['left']){
                 dir += "_left";
-            else if(Q.inputs['right'])
+            }
+            else if(Q.inputs['right']){
                 dir += "_right";
-
-             if(dir !== "walking"){
+            }if(dir !== "walking"){
                 this.play(dir);
+            }
+            if(Q.inputs['fire']){
+                //Q.audio.play('forest', {loop:true});
+                //Q.audio.play('sword1.ogg');
             }
         }
     });

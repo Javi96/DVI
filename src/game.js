@@ -1,13 +1,19 @@
 window.addEventListener('load', function() {
+
+
+
+
+
+
     /**
      * Variable principal del Quintus.
      */
-    var Q = Quintus( /*{ audioSupported: ['mp3', 'ogg'] }*/ )
+    var Q = Quintus({ development: true, audioSupported: [ 'ogg', 'mp3' ] } /*{ audioSupported: ['mp3', 'ogg'] }*/ )
         /**
          * Se añaden los módulos necesarios para el funcionamiento de
          * la aplicación.
          */
-        .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX')
+        .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX, Audio')
         /**
          * Se ajusta la ventana.
          */
@@ -15,7 +21,7 @@ window.addEventListener('load', function() {
         /**
          * Se le añade funcionalidad.
          */
-        .controls().touch(); /*.enableSound();*/
+        .controls().touch().enableSound(); /*.enableSound();*/
 
         Q.SPRITE_NONE = 0;
         Q.SPRITE_PLAYER = 1;
@@ -37,7 +43,7 @@ window.addEventListener('load', function() {
      * Cargamos los ficheros que necesitamos para el juego.
      */
 
-    Q.loadTMX('house_link.tmx, casa_link_map.tmx, Link.png, Link.json, ganon.png, ganon.json, loading.sword3.png, loading.sword3.json', function() {
+    Q.loadTMX('house_link.tmx, forest.mp3, casa_link_map.tmx, Link.png, Link.json, ganon.png, ganon.json, loading.sword3.png, loading.sword3.json', function() {
         
         Q.compileSheets("Link.png", "Link.json");
 
@@ -49,9 +55,11 @@ window.addEventListener('load', function() {
             walk: {frames: [5, 6], rate: 1/5, loop:true}
         });
 
-        
-              Q.stageScene('level1');
+        Q.stageScene('level1');
 
     });
+
+
+    
 
 });
