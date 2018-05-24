@@ -1,4 +1,10 @@
 {
-	"ganonWalk":{"sx": 0, "sy":0, "tileW": 64, "tileH": 64, "frames": 2} 
-
+    "ganonWalk":
+    {
+        "sx": 0,
+        "sy": 0,
+        "tileW": 64,
+        "tileH": 64,
+        "frames": 10
+    }
 }
