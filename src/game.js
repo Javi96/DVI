@@ -52,7 +52,7 @@ window.addEventListener('load', function() {
         Q.compileSheets("loading.sword3.png", "loading.sword3.json")
 
         Q.animations("ganonAnim", {
-            walk: {frames: [5, 6], rate: 1/5, loop:true}
+            walk: {frames: [9, 5, 6], rate: 1/5, loop:true}
         });
 
         Q.stageScene('level1');
