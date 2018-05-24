@@ -8230,6 +8230,9 @@
    <tile gid="119"/>
   </data>
  </layer>
+ <objectgroup name="Link">
+  <object id="3" gid="353" x="590" y="304" width="17" height="24"/>
+ </objectgroup>
  <objectgroup name="Ganon">
   <object id="10" gid="406" x="473" y="325" width="64" height="64"/>
  </objectgroup>
