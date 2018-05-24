@@ -17,5 +17,7 @@ function loadLevel1(Q) {
             minX: 0,
             maxX: 1024,
         });
+        Q.audio.play('forest.mp3', {loop:true});
+
     })
 }
