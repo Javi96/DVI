@@ -5,8 +5,6 @@ Quintus.Link = function(Q) {
             this._super(p, {
                 sheet: 'link',
                 sprite: 'linkAnim',
-                x: 64,
-                y: 40,
                 gravity: 0,
                 stepDistance: 8, // should be tile size
                 stepDelay: 0.1, // seconds to delay before next step
@@ -16,6 +14,9 @@ Quintus.Link = function(Q) {
                     [8, 5],
                     [-8, 5]
                 ],
+                reloadSword: 0,
+                reloadSwordTime: 0.5,
+
                 type: Q.SPRITE_PLAYER,
                 collisionMask: Q.SPRITE_NONE | Q.SPRITE_DEFAULT,
             });
@@ -23,23 +24,26 @@ Quintus.Link = function(Q) {
             //this.on("enemy.hit","enemyHit");
         },
         step: function(dt) {
-            dir = "walking";
+            this.p.reloadSword -= dt;
+            var dir = 'walking';
             if (Q.inputs['up']) {
-                dir += "_up";
+                dir += '_up';
             } else if (Q.inputs['down']) {
-                dir += "_down";
+                dir += '_down';
             }
             if (Q.inputs['left']) {
-                dir += "_left";
+                dir += '_left';
             } else if (Q.inputs['right']) {
-                dir += "_right";
+                dir += '_right';
             }
-            if (dir !== "walking") {
+            if (dir !== 'walking') {
                 this.play(dir);
             }
             if (Q.inputs['fire']) {
-                //Q.audio.play('forest', {loop:true});
-                //Q.audio.play('sword1.ogg');
+                if (this.p.reloadSword < 0) {
+                    Q.audio.play('sword1.mp3');
+                    this.p.reloadSword = this.p.reloadSwordTime;
+                }
             }
         }
     });

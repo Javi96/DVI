@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="28" height="22" tilewidth="8" tileheight="8" infinite="0" nextobjectid="58">
- <tileset firstgid="1" name="house_link.tiles" tilewidth="8" tileheight="8" tilecount="6400" columns="80">
-  <image source="../images/house.tiles.png" width="640" height="640"/>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="28" height="22" tilewidth="8" tileheight="8" infinite="0" nextobjectid="69">
+ <tileset firstgid="1" name="house_link_bank" tilewidth="8" tileheight="8" tilecount="6400" columns="80">
+  <image source="../images/house_link_bank.png" width="640" height="640"/>
  </tileset>
  <tileset firstgid="6401" name="Link" tilewidth="16" tileheight="24" tilecount="44" columns="11">
-  <image source="../images/Link.png" width="176" height="96"/>
+  <image source="../images/link.png" width="176" height="96"/>
   <tile id="0">
    <properties>
     <property name="Class" value="Link"/>
@@ -13,6 +13,14 @@
   <tile id="33">
    <properties>
     <property name="Class" value="Link"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="6445" name="item_chest_small" tilewidth="16" tileheight="16" tilecount="2" columns="2">
+  <image source="../images/item_chest_small.png" width="32" height="16"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Chest"/>
    </properties>
   </tile>
  </tileset>
@@ -640,7 +648,7 @@
    <tile/>
   </data>
  </layer>
- <layer name="Paredes" width="28" height="22" visible="0">
+ <layer name="Paredes" width="28" height="22">
   <properties>
    <property name="collision" type="bool" value="true"/>
   </properties>
@@ -1682,8 +1690,8 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="213"/>
-   <tile gid="214"/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -1710,8 +1718,8 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="293"/>
-   <tile gid="294"/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -1886,7 +1894,10 @@
    <tile/>
   </data>
  </layer>
+ <objectgroup name="Chest">
+  <object id="65" gid="6445" x="175.272" y="127.819" width="16" height="16"/>
+ </objectgroup>
  <objectgroup name="Link">
-  <object id="56" gid="6434" x="73" y="61" width="16" height="24"/>
+  <object id="66" gid="6401" x="74.5455" y="63.8182" width="16" height="24"/>
  </objectgroup>
 </map>

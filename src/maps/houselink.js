@@ -7,6 +7,7 @@ Quintus.HouseLinkMap = function(Q) {
         Q.stageTMX('house_link.tmx', stage);
 
         var player = Q('Link').first();
+        
         var sword = stage.insert(new Q.Sword(), player);
 
         stage.add('viewport').follow(player, { x: true, y: true }, {
