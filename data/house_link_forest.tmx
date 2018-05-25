@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="64" tilewidth="8" tileheight="8" infinite="0" nextobjectid="13">
  <tileset firstgid="1" name="casa_link_bank.png" tilewidth="8" tileheight="8" tilecount="352" columns="22">
-  <image source="../images/casa_link_bank.png" width="176" height="128"/>
+  <image source="../images/house_link_forest_bank.png" width="176" height="128"/>
  </tileset>
  <tileset firstgid="353" name="Link" tilewidth="16" tileheight="24" tilecount="44" columns="11">
-  <image source="../images/Link.png" width="176" height="96"/>
+  <image source="../images/link/link.png" width="176" height="96"/>
   <tile id="0">
    <properties>
     <property name="Class" value="Link"/>
@@ -17,7 +17,7 @@
   </tile>
  </tileset>
  <tileset firstgid="397" name="ganon" tilewidth="64" tileheight="64" tilecount="10" columns="5">
-  <image source="../images/ganon.png" width="320" height="128"/>
+  <image source="../images/enemy_ganon.png" width="320" height="128"/>
   <tile id="0">
    <properties>
     <property name="Class" value="Ganon"/>
@@ -30,7 +30,7 @@
   </tile>
  </tileset>
  <imagelayer name="background" locked="1">
-  <image source="../images/casa_link.png" width="1024" height="512"/>
+  <image source="../images/house_link_forest.png" width="1024" height="512"/>
   <properties>
    <property name="collision" type="bool" value="false"/>
    <property name="type" type="int" value="0"/>
