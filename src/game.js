@@ -13,6 +13,7 @@ window.addEventListener('load', function() {
         .include('LoadDefaultEnemy, Ganon')
         .include('DefaultNPC')
         .include('Chest')
+        .include('Collider')
         /**
          * Se ajusta la ventana del juego.
          */
