@@ -4,7 +4,7 @@
   <image source="../images/house_link_forest_bank.png" width="176" height="128"/>
  </tileset>
  <tileset firstgid="353" name="Link" tilewidth="16" tileheight="24" tilecount="44" columns="11">
-  <image source="../images/link/link.png" width="176" height="96"/>
+  <image source="../images/link.png" width="176" height="96"/>
   <tile id="0">
    <properties>
     <property name="Class" value="Link"/>
@@ -16,8 +16,8 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="397" name="ganon" tilewidth="64" tileheight="64" tilecount="10" columns="5">
-  <image source="../images/enemy_ganon.png" width="320" height="128"/>
+ <tileset firstgid="397" name="ganon" tilewidth="48" tileheight="40" tilecount="10" columns="5">
+  <image source="../images/enemy_ganon.png" width="240" height="82"/>
   <tile id="0">
    <properties>
     <property name="Class" value="Ganon"/>
@@ -8239,6 +8239,6 @@
   <object id="12" gid="386" x="695" y="303" width="16" height="24"/>
  </objectgroup>
  <objectgroup name="Ganon">
-  <object id="10" gid="406" x="473" y="325" width="64" height="64"/>
+  <object id="10" gid="406" x="483.667" y="309" width="48" height="40"/>
  </objectgroup>
 </map>
