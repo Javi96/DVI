@@ -9,14 +9,8 @@ Quintus.Collider = function(Q) {
         },
 
         sensor: function(col){
-            var nextDoor = this.p.to;
-            Q.stageScene(nextDoor);
-            col.obj.p.x = nextDoor.x;
-            col.obj.p.y = nextDoor.y;
-        },
-
-        findLinkedDoor: function() {
-            return this.stage.find(this.p.to);
+            //animacion pantalla negra
+            Q.stageScene(this.p.to, {xLink: this.p.xLink, yLink: this.p.yLink});
         }
     });
 };
