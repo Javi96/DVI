@@ -29,7 +29,8 @@ window.addEventListener('load', function() {
     Q.SPRITE_PLAYER = 1;
     Q.SPRITE_SWORD = 2;
     Q.SPRITE_ENEMY = 4;
-    Q.SPRITE_DOOR = 64;
+    Q.SPRITE_CHEST = 8;
+    Q.SPRITE_COLLIDER = 16;
 
     /**
      * Cargamos los ficheros que necesitamos para el juego.
