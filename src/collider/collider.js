@@ -2,14 +2,10 @@ Quintus.Collider = function(Q) {
     Q.Sprite.extend('Collider', {
         init: function(p) {
             this._super(p, {
-                sheet: p.sprite,
-                type: Q.SPRITE_DOOR,
-                collisionMask: Q.SPRITE_NONE,
-                sensor: true,
-                gravity: 0                
-            })
-            this.add("animation");
-            this.on("sensor");
+                asset: 'item_lamp.png',
+                sensor: true,               
+            });
+            this.on('sensor', this, 'sensor');
         },
 
         sensor: function(col){
@@ -23,4 +19,4 @@ Quintus.Collider = function(Q) {
             return this.stage.find(this.p.to);
         }
     });
-}
+};

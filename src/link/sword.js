@@ -14,14 +14,14 @@ Quintus.SwordLink = function(Q) {
         },
         step: function(dt) {
             dir = 'sword';
-            if (Q.inputs['up']) {
+            if (Q.inputs.up) {
                 dir += '_up';
-            } else if (Q.inputs['down']) {
+            } else if (Q.inputs.down) {
                 dir += '_down';
             }
-            if (Q.inputs['left']) {
+            if (Q.inputs.left) {
                 dir += '_left';
-            } else if (Q.inputs['right']) {
+            } else if (Q.inputs.right) {
                 dir += '_right';
             }
             if (dir !== 'sword') {
@@ -48,4 +48,4 @@ Quintus.SwordLink = function(Q) {
         'sword_down_left': { frames: [18, 19, 20, 21, 22, 23], rate: 1 / 12, next: 'sword_down_left_stop' },
         'sword_down_left_stop': { frames: [18] },
     });
-}
+};
