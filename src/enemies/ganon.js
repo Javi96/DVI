@@ -19,4 +19,4 @@ Quintus.Ganon = function(Q) {
     Q.animations('ganonAnim', {
         walk: { frames: [5, 6], rate: 1 / 5, loop: true }
     });
-}
+};

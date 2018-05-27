@@ -5,4 +5,4 @@ Quintus.Collider = function(Q) {
         },
         step: function(dt) {}
     });
-}
+};
