@@ -14,32 +14,57 @@ Quintus.Link = function(Q) {
                     [8, 12],
                     [-8, 12]
                 ],
-
+                hp: 2,
                 type: Q.SPRITE_PLAYER,
-
-                collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_DOOR,
-
-
+                collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY,
             });
             this.add('stepControls, animation');
+            this.on('hit', 'hit');
+            this.on('dead', 'dead')
+            this.on('restart', 'restart')
         },
+
+        restart: function(){
+            this.p.sheet = 'link'
+            this.p.stepDistance = 16;
+            Q.audio.play('forest.mp3')
+        },
+
+        hit: function(col){
+            if(col.obj.p.type === Q.SPRITE_ENEMY){
+                this.p.hp--;
+                if(this.p.hp == 0){
+                    this.p.sheet = 'dying'
+                    this.trigger('dead')
+                }
+            }
+        },
+
+        dead: function(){
+            this.p.stepDistance = 0;
+            Q.audio.stop();
+            Q.audio.play("hero_dying.mp3")
+            this.play('dying', 1);
+            
+        },
+
         step: function(dt) {
+            this.p.reloadSword -= dt;
             var dir = 'walking';
             
-            if (Q.inputs['up']) {
-                dir += '_up';
-            } else if (Q.inputs['down']) {
-                dir += '_down';
-
-            }
-            if (Q.inputs['left']) {
-                dir += '_left';
-            } else if (Q.inputs['right']) {
-                dir += '_right';
-            }
-            if (dir !== 'walking') {
-                this.play(dir);
-            }
+                if (Q.inputs['up']) {
+                    dir += '_up';
+                } else if (Q.inputs['down']) {
+                    dir += '_down';
+                }
+                if (Q.inputs['left']) {
+                    dir += '_left';
+                } else if (Q.inputs['right']) {
+                    dir += '_right';
+                }
+                if (dir !== 'walking') {
+                    this.play(dir);
+                }
             
             this.stage.collide(this);
         }
@@ -64,6 +89,8 @@ Quintus.Link = function(Q) {
         'stand_down_left': { frames: [30] },
 
         'walking_left': { frames: [22, 23, 24, 25, 26, 27, 28, 29], rate: 1 / 16, next: 'stand_left' },
-        'stand_left': { frames: [22] }
+        'stand_left': { frames: [22] },
+
+        'dying' : {frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], rate: 1/8, loop:false,  trigger:"restart"}
     });
 };
