@@ -51,6 +51,7 @@ Quintus.SwordLink = function(Q) {
                 this.p.originY = this.p.cy;
                 this.p.cx += 24;
                 this.p.cy += 8;//tengo que hacer eso y cuadrarla a jo
+
             }
             if(this.p.atack){
                 this.play('sword_atack' + this.p.direction);//
@@ -93,4 +94,4 @@ Quintus.SwordLink = function(Q) {
         'sword_down_left_stop': { frames: [18] },
         
     });
-}
+};

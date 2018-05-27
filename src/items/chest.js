@@ -4,10 +4,17 @@ Quintus.Chest = function(Q) {
             this._super(p, {
                 sheet: 'chestSmall',
                 sprite: 'chestAnim',
+                sensor: true,
                 open: false,
-                hp: 1
             });
-            this.add('animation, tween');
+            this.add('animation');
+            this.on('sensor', this, 'sensor');
+        },
+        sensor: function() {
+            Q.audio.play('chest_open.mp3');
+            this.p.open = true;
+            this.p.sensor = false;
+            var obj = this.stage.insert(new Q.Item({ object: this.p.object, x: this.p.x, y: this.p.y - 10 }));
         },
         step: function(dt) {
             if (!this.p.open) {
@@ -22,4 +29,4 @@ Quintus.Chest = function(Q) {
         close: { frames: [0] },
         open: { frames: [1] }
     });
-}
+};

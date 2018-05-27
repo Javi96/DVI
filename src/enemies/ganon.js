@@ -49,4 +49,4 @@ Quintus.Ganon = function(Q) {
         walk: { frames: [5, 6], rate: 1 / 5, loop: true }
 
     });
-}
+};
