@@ -1,0 +1,10 @@
+{
+    "chestSmall":
+    {
+        "sx": 66,
+        "sy": 0,
+        "tileW": 12,
+        "tileH": 16,
+        "frames": 1
+    }
+}
