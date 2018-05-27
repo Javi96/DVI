@@ -28,12 +28,13 @@ window.addEventListener('load', function() {
     Q.SPRITE_NONE = 0;
     Q.SPRITE_PLAYER = 1;
     Q.SPRITE_SWORD = 2;
+    Q.SPRITE_ENEMY = 4;
 
     /**
      * Cargamos los ficheros que necesitamos para el juego.
      */
     var maps = 'house_link.tmx, house_link_forest.tmx';
-    var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json';
+    var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json';
     var items = 'item_chest.png, item_chest.json';
     var sounds = 'forest.mp3, sword1.mp3';
@@ -42,7 +43,7 @@ window.addEventListener('load', function() {
 
         Q.compileSheets('link.png', 'link.json');
         Q.compileSheets('loading.sword3.png', 'loading.sword3.json');
-
+        Q.compileSheets('sword.sword3.png', 'sword.sword3.json');
         Q.compileSheets('enemy_ganon.png', 'enemy_ganon.json');
 
         Q.compileSheets('item_chest.png', 'item_chest.json');

@@ -4,7 +4,6 @@
         "sx": 0,
         "sy": 0,
         "tileW": 40,
-        "tileH": 40,
-        "frames": 24
+        "tileH": 40
     }
 }
