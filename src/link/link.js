@@ -18,7 +18,7 @@ Quintus.Link = function(Q) {
                 reloadSwordTime: 0.5,
 
                 type: Q.SPRITE_PLAYER,
-                collisionMask: Q.SPRITE_NONE | Q.SPRITE_DEFAULT,
+                collisionMask: Q.SPRITE_NONE | Q.SPRITE_DEFAULT | Q.SPRITE_DOOR,
             });
             this.add('2d, stepControls, animation');
             //this.on("enemy.hit","enemyHit");
@@ -26,20 +26,20 @@ Quintus.Link = function(Q) {
         step: function(dt) {
             this.p.reloadSword -= dt;
             var dir = 'walking';
-            if (Q.inputs['up']) {
+            if (Q.inputs.up) {
                 dir += '_up';
-            } else if (Q.inputs['down']) {
+            } else if (Q.inputs.down) {
                 dir += '_down';
             }
-            if (Q.inputs['left']) {
+            if (Q.inputs.left) {
                 dir += '_left';
-            } else if (Q.inputs['right']) {
+            } else if (Q.inputs.right) {
                 dir += '_right';
             }
             if (dir !== 'walking') {
                 this.play(dir);
             }
-            if (Q.inputs['fire']) {
+            if (Q.inputs.fire) {
                 if (this.p.reloadSword < 0) {
                     Q.audio.play('sword1.mp3');
                     this.p.reloadSword = this.p.reloadSwordTime;
