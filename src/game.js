@@ -12,7 +12,7 @@ window.addEventListener('load', function() {
         .include('Link, SwordLink')
         .include('LoadDefaultEnemy, Ganon')
         .include('DefaultNPC')
-        .include('Lamp, Chest')
+        .include('Item, Chest')
         .include('Collider')
         /**
          * Se ajusta la ventana del juego.
@@ -37,7 +37,7 @@ window.addEventListener('load', function() {
     var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json';
     var items = 'item_lamp.png, item_chest.png, item_chest.json';
-    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3';
+    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3';
 
     Q.loadTMX(maps + ', ' + link + ', ' + enemies + ', ' + items + ', ' + sounds, function() {
 
