@@ -6,45 +6,42 @@ Quintus.Link = function(Q) {
                 sheet: 'link',
                 sprite: 'linkAnim',
                 gravity: 0,
-                stepDistance: 8, // should be tile size
-                stepDelay: 0.1, // seconds to delay before next step
+                stepDistance: 16, // should be tile size
+                stepDelay: 0.2, // seconds to delay before next step
                 points: [
-                    [-8, -5],
-                    [8, -5],
-                    [8, 5],
-                    [-8, 5]
+                    [-8, -3],
+                    [8, -3],
+                    [8, 12],
+                    [-8, 12]
                 ],
-                reloadSword: 0,
-                reloadSwordTime: 0.5,
 
                 type: Q.SPRITE_PLAYER,
-                collisionMask: Q.SPRITE_NONE | Q.SPRITE_DEFAULT | Q.SPRITE_DOOR,
+
+                collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_DOOR,
+
+
             });
-            this.add('2d, stepControls, animation');
-            //this.on("enemy.hit","enemyHit");
+            this.add('stepControls, animation');
         },
         step: function(dt) {
-            this.p.reloadSword -= dt;
             var dir = 'walking';
-            if (Q.inputs.up) {
+            
+            if (Q.inputs['up']) {
                 dir += '_up';
-            } else if (Q.inputs.down) {
+            } else if (Q.inputs['down']) {
                 dir += '_down';
+
             }
-            if (Q.inputs.left) {
+            if (Q.inputs['left']) {
                 dir += '_left';
-            } else if (Q.inputs.right) {
+            } else if (Q.inputs['right']) {
                 dir += '_right';
             }
             if (dir !== 'walking') {
                 this.play(dir);
             }
-            if (Q.inputs.fire) {
-                if (this.p.reloadSword < 0) {
-                    Q.audio.play('sword1.mp3');
-                    this.p.reloadSword = this.p.reloadSwordTime;
-                }
-            }
+            
+            this.stage.collide(this);
         }
     });
 
