@@ -27,7 +27,7 @@
    </properties>
   </tile>
  </tileset>
- <layer name="ColliderForest" width="28" height="22">
+ <layer name="Collider" width="28" height="22">
   <properties>
    <property name="Class" value="Collider"/>
    <property name="collision" type="bool" value="true"/>
@@ -3149,7 +3149,11 @@
   </data>
  </layer>
  <objectgroup name="Chest">
-  <object id="65" gid="6445" x="175.272" y="127.819" width="16" height="16"/>
+  <object id="65" gid="6445" x="175.272" y="127.819" width="16" height="16">
+   <properties>
+    <property name="object" value="lamp"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="Link">
   <object id="66" gid="6401" x="74.5455" y="63.8182" width="16" height="24"/>
