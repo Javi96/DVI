@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="64" tilewidth="8" tileheight="8" infinite="0" nextobjectid="13">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="64" tilewidth="8" tileheight="8" infinite="0" nextobjectid="23">
  <tileset firstgid="1" name="casa_link_bank.png" tilewidth="8" tileheight="8" tilecount="352" columns="22">
   <image source="../images/house_link_forest_bank.png" width="176" height="128"/>
  </tileset>
@@ -29,6 +29,33 @@
    </properties>
   </tile>
  </tileset>
+ <tileset firstgid="407" name="collider" tilewidth="8" tileheight="8" tilecount="400" columns="20">
+  <image source="../images/collider.png" width="160" height="160"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Collider"/>
+    <property name="collision" type="bool" value="true"/>
+    <property name="from" value="houseLinkMap"/>
+    <property name="to" value="houseLinkForestMap"/>
+    <property name="xLink" type="int" value="703"/>
+    <property name="yLink" type="int" value="291"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Class" value="Collider"/>
+    <property name="collision" type="bool" value="true"/>
+    <property name="from" value="houseLinkForestMap"/>
+    <property name="to" value="houseLinkMap"/>
+    <property name="xLink" type="int" value="114"/>
+    <property name="yLink" type="int" value="147"/>
+   </properties>
+  </tile>
+ </tileset>
+ <objectgroup name="Collider">
+  <object id="16" gid="408" x="696" y="276" width="8" height="8"/>
+  <object id="17" gid="408" x="704" y="276" width="8" height="8"/>
+ </objectgroup>
  <imagelayer name="background" locked="1">
   <image source="../images/house_link_forest.png" width="1024" height="512"/>
   <properties>
