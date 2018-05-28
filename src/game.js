@@ -2,7 +2,7 @@ window.addEventListener('load', function() {
     /**
      * Variable principal del Quintus.
      */
-    var Q = Quintus({ development: true, audioSupported: ['ogg', 'mp3'] })
+    var Q = Quintus({ development: true, audioSupported: ['mp3'] })
         /**
          * Se añaden los módulos necesarios para el funcionamiento
          * del juego.
@@ -41,7 +41,7 @@ window.addEventListener('load', function() {
     var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json';
     var items = 'item_lamp.png, item_chest.png, item_chest.json';
-    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3';
+    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3';
 
 
     Q.loadTMX(maps + ', ' + link + ', ' + enemies + ', ' + items + ', ' + sounds + ', ' + screen, function() {
@@ -51,6 +51,6 @@ window.addEventListener('load', function() {
         Q.compileSheets('enemy_ganon.png', 'enemy_ganon.json');
 
         Q.compileSheets('item_chest.png', 'item_chest.json');
-        Q.stageScene('endGame');
+        Q.stageScene('initialMenu');
     });
 });

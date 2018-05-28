@@ -13,6 +13,7 @@ Quintus.Collider = function(Q) {
             if (this.p.sensor) {
                 //animacion pantalla negra
                 Q.audio.stop();
+                Q.clearStages();
                 Q.stageScene(this.p.to, { xLink: this.p.xLink, yLink: this.p.yLink });
                 sensor = false;
             }
