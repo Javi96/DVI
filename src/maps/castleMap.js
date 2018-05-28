@@ -4,7 +4,7 @@ Quintus.CastleMap = function(Q) {
      */
     Q.scene('castleMap', function(stage) {
 
-        Q.stageTMX('castillo_map.tmx', stage);
+        Q.stageTMX('castle_map.tmx', stage);
 
         var player = Q('Link').first();
         if (stage.options.xLink) {

@@ -36,6 +36,34 @@
     <property name="yLink" type="int" value="291"/>
    </properties>
   </tile>
+  <tile id="1">
+   <properties>
+    <property name="Class" value="Collider"/>
+    <property name="collision" type="bool" value="true"/>
+    <property name="from" value="houseLinkForestMap"/>
+    <property name="to" value="houseLinkMap"/>
+    <property name="xLink" type="int" value="114"/>
+    <property name="yLink" type="int" value="147"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="Class" value="Collider"/>
+    <property name="collision" type="bool" value="true"/>
+    <property name="from" value="houseLinkForestMap"/>
+    <property name="to" value="castleMap"/>
+    <property name="yLink" type="int" value="995"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="Class" value="Collider"/>
+    <property name="collision" type="bool" value="true"/>
+    <property name="from" value="castleMap"/>
+    <property name="to" value="houseLinkForestMap"/>
+    <property name="yLink" type="int" value="24"/>
+   </properties>
+  </tile>
  </tileset>
  <objectgroup name="Collider">
   <object id="87" gid="6447" x="96" y="176" width="32" height="8"/>
