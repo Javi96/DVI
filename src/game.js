@@ -2,53 +2,64 @@ window.addEventListener('load', function() {
     /**
      * Variable principal del Quintus.
      */
-    var Q = Quintus( /*{ audioSupported: ['mp3', 'ogg'] }*/ )
+    var Q = Quintus({ development: true, audioSupported: ['mp3'] })
         /**
-         * Se añaden los módulos necesarios para el funcionamiento de
-         * la aplicación.
+         * Se añaden los módulos necesarios para el funcionamiento
+         * del juego.
          */
-        .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX')
+        .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX, Audio')
+        .include('CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
+        .include('Link, SwordLink')
+        .include('LoadDefaultEnemy, Ganon')
+        .include('DefaultNPC')
+        .include('Item, Chest')
+        .include('Collider, Intro')
+        .include('Heart')
         /**
-         * Se ajusta la ventana.
+         * Se ajusta la ventana del juego.
          */
-        .setup({ maximize: true })
+        .setup({ width: 569, heigth: 315 })
         /**
          * Se le añade funcionalidad.
          */
-        .controls().touch(); /*.enableSound();*/
-
-
-    Q.SPRITE_PLAYER = 1;
-    Q.SPRITE_ENEMY = 2;
+        .controls().touch().enableSound();
     /**
-     * Cargamos los diversos componentes que utilizaremos durante el juego.
+     * Máscaras para los sprites personalizados.
      */
-    loadLevel1(Q);
-
-    loadEnemy(Q);
-
-    loadLink(Q);
-
-
+    Q.SPRITE_NONE = 0;
+    Q.SPRITE_PLAYER = 1;
+    Q.SPRITE_SWORD = 2;
+    Q.SPRITE_ENEMY = 4;
+    Q.SPRITE_CHEST = 8;
+    Q.SPRITE_COLLIDER = 16;
 
     /**
      * Cargamos los ficheros que necesitamos para el juego.
      */
+    var confirm = false;        
+    var screen = 'intro.png, intro.json, end_game.png';
+    var maps = 'house_link.tmx, house_link_forest.tmx, castillo_map.tmx';
 
-    Q.loadTMX('house_link.tmx, walking_tunic.png, walking_tunic.json, ganon.png, ganon.json', function() {
-        Q.compileSheets("walking_tunic.png", "walking_tunic.json");
+    var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json';
+    var enemies = 'enemy_ganon.png, enemy_ganon.json';
+    var items = 'item_lamp.png, item_chest.png, item_chest.json';
+    var UI = 'hearts.png, heart.json, dialog_box.png, rupee_icon.png';
+    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, hero_hurt.mp3, heart.mp3';
+    
 
-        Q.compileSheets("ganon.png", "ganon.json");
 
-        Q.animations("ganonAnim", {
-            walk: {frames: [5, 6], rate: 1/5, loop:true}
-        });
+    Q.loadTMX(maps + ', ' + link + ', ' + enemies + ', ' + items + ', ' + UI + ', ' + sounds + ', ' + screen, function() {
+        Q.compileSheets('link.png', 'link.json');
+        Q.compileSheets('loading.sword3.png', 'loading.sword3.json');
+        Q.compileSheets('sword.sword3.png', 'sword.sword3.json');
+        Q.compileSheets('enemy_ganon.png', 'enemy_ganon.json');
 
-        Q.animations("linkAnim", {
-            "walking_right": { frames: [0,1,2,3,4,5,6,7], rate: 1/8, loop: true },
-      });
-              Q.stageScene('level1');
+        Q.compileSheets('item_chest.png', 'item_chest.json');
+        Q.compileSheets('hearts.png', 'heart.json');
 
+        Q.compileSheets('intro.png', 'intro.json');
+
+        Q.state.reset({ score: 0, lives: 3, maxLives: 3 });
+        Q.stageScene('castleMap');
     });
-
 });
