@@ -3,11 +3,10 @@ Quintus.Dialog = function(Q){
         init: function(p){
             this._super(p, {
                 asset: 'dialog_box.png',
-                gravity: 0,
-                type: Q.SPRITE_UI
+                type: Q.SPRITE_UI,
+                x: Q.width/2,
+                y: Q.height - 100
             })
-            this.on('talk', 'talk');
         }
     });
-
 }

@@ -8,9 +8,9 @@ window.addEventListener('load', function() {
          * del juego.
          */
         .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX, Audio')
-        .include('CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
+        .include('Hud, CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
         .include('Link, SwordLink')
-        .include('LoadDefaultEnemy, Ganon')
+        .include('LoadDefaultEnemy, Ganon, Deadrock')
         .include('DefaultNPC')
         .include('Item, Chest')
         .include('Collider, Intro')
@@ -61,16 +61,16 @@ window.addEventListener('load', function() {
     }, {stage: 1});
 
     Q.scene('dialog', function(stage){
-        //stage.insert(new Q.Dialog());
-        stage.insert(new Q.UI.Button({
-            label: 'ay',
-            x: Q.width/2,
-            y: Q.heigth - 300,
-            asset: 'dialog_box.png'
-        }, function(){
-            this.destroy();
-        }))
-    }, {stage: 1});
+        var txt = new Q.UI.Text({
+            //label: stage.options.label,
+            label: 'hola',
+            y:0,
+            x:0,
+            color: 'white'
+        });
+        var d = stage.insert(new Q.Dialog());
+        stage.insert(txt, d);
+    }, {stage: 2});
 
     Q.loadTMX(maps + ', ' + link + ', ' + enemies + ', ' + items + ', ' + UI + ', ' + sounds + ', ' + screen, function() {
         Q.compileSheets('link.png', 'link.json');
@@ -82,9 +82,10 @@ window.addEventListener('load', function() {
         Q.compileSheets('hearts.png', 'heart.json');
 
         Q.compileSheets('intro.png', 'intro.json');
-
         Q.state.reset({ score: 0, lives: 3, maxLives: 3 });
         Q.stageScene('hud');
+        //Q.stageScene('dialog');
+        
 
         Q.stageScene('initialMenu');
     });
