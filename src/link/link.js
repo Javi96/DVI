@@ -24,7 +24,6 @@ Quintus.Link = function(Q) {
         },
 
         restart: function() {
-            console.log('dead');
             Q.audio.stop();
             Q.clearStages();
             Q.stageScene('endGame');
@@ -39,7 +38,7 @@ Quintus.Link = function(Q) {
                     {
                         Q.state.dec("lives", 1);
                         Q.audio.play("hero_hurt.mp3");
-
+                        console.log(Q.state.get("lives"));
                         if(Q.state.get('lives') === 0){
                             this.trigger('dead');
                         }
@@ -62,7 +61,6 @@ Quintus.Link = function(Q) {
         },
 
         step: function(dt) {
-            console.log(this.p.x, ' ', this.p.y);
             this.p.reloadSword -= dt;
             var dir = 'walking';
 
