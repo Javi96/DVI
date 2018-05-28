@@ -57,6 +57,19 @@ window.addEventListener('load', function() {
         }
         stage.insert(new Q.Rupee());
         stage.insert(new Q.Score());
+        Q.stageScene('dialog');
+    }, {stage: 1});
+
+    Q.scene('dialog', function(stage){
+        //stage.insert(new Q.Dialog());
+        stage.insert(new Q.UI.Button({
+            label: 'ay',
+            x: Q.width/2,
+            y: Q.heigth - 300,
+            asset: 'dialog_box.png'
+        }, function(){
+            this.destroy();
+        }))
     }, {stage: 1});
 
     Q.loadTMX(maps + ', ' + link + ', ' + enemies + ', ' + items + ', ' + UI + ', ' + sounds + ', ' + screen, function() {

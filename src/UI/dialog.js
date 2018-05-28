@@ -7,10 +7,7 @@ Quintus.Dialog = function(Q){
                 type: Q.SPRITE_UI
             })
             this.on('talk', 'talk');
-        },
-
-        talk: function(){
-            
         }
     });
+
 }
