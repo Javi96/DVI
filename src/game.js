@@ -38,7 +38,7 @@ window.addEventListener('load', function() {
      */
     var confirm = false;        
     var screen = 'intro.png, intro.json, end_game.png';
-    var maps = 'house_link.tmx, house_link_forest.tmx, castillo_map.tmx';
+    var maps = 'house_link.tmx, house_link_forest.tmx, castle_map.tmx';
 
     var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json';
@@ -68,6 +68,6 @@ window.addEventListener('load', function() {
         Q.state.reset({ score: 0, lives: 3, maxLives: 3 });
         Q.stageScene('hud');
 
-        Q.stageScene('houseLinkMap');
+        Q.stageScene('initialMenu');
     });
 });
