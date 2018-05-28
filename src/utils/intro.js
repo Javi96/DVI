@@ -9,7 +9,6 @@ Quintus.Intro = function(Q) {
             });
             this.add('animation');
             this.play('intro');
-            Q.audio.play('title_screen.mp3');
         },
 
         step: function(dt) {}

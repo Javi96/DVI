@@ -2,6 +2,7 @@ Quintus.InitialMenu = function(Q) {
 
     Q.scene('initialMenu', function(stage) {
         console.log('Menu inicial');
+        var confirm = true;
         var intro = stage.insert(new Q.Intro());
         var container = stage.insert(new Q.UI.Container({
             x: Q.width / 100,
@@ -26,6 +27,7 @@ Quintus.InitialMenu = function(Q) {
                 confirm = false;
             }
         });
+        Q.audio.play('title_screen.mp3');
         stage.add('viewport').follow(intro);
         container.fit(15, 25);
     });
