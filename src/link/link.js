@@ -62,6 +62,7 @@ Quintus.Link = function(Q) {
         },
 
         step: function(dt) {
+            console.log(this.p.x, ' ', this.p.y);
             this.p.reloadSword -= dt;
             var dir = 'walking';
 
