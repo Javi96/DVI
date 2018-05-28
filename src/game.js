@@ -13,11 +13,11 @@ window.addEventListener('load', function() {
         .include('LoadDefaultEnemy, Ganon')
         .include('DefaultNPC')
         .include('Item, Chest')
-        .include('Collider')
+        .include('Collider, Intro')
         /**
          * Se ajusta la ventana del juego.
          */
-        .setup({ width: 822, heigth: 462 })
+        .setup({ width: 569, heigth: 315 })
         /**
          * Se le añade funcionalidad.
          */
@@ -36,7 +36,7 @@ window.addEventListener('load', function() {
      * Cargamos los ficheros que necesitamos para el juego.
      */
     var confirm = false;        
-    var screen = 'main_title.png, end_game.png';
+    var screen = 'intro.png, intro.json, end_game.png';
     var maps = 'house_link.tmx, house_link_forest.tmx';
     var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json';
@@ -51,6 +51,8 @@ window.addEventListener('load', function() {
         Q.compileSheets('enemy_ganon.png', 'enemy_ganon.json');
 
         Q.compileSheets('item_chest.png', 'item_chest.json');
+
+        Q.compileSheets('intro.png', 'intro.json');
         Q.stageScene('initialMenu');
     });
 });
