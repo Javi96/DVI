@@ -13,7 +13,8 @@ window.addEventListener('load', function() {
         .include('LoadDefaultEnemy, Ganon')
         .include('DefaultNPC')
         .include('Item, Chest')
-        .include('Collider, Intro, GameOver')
+        .include('Collider, Intro')
+        .include('Heart, Rupee, Dialog')
         /**
          * Se ajusta la ventana del juego.
          */
@@ -35,24 +36,38 @@ window.addEventListener('load', function() {
     /**
      * Cargamos los ficheros que necesitamos para el juego.
      */
+    var confirm = false;        
     var screen = 'intro.png, intro.json, end_game.png';
-    var maps = 'house_link.tmx, house_link_forest.tmx, castle_map.tmx';
+    var maps = 'house_link.tmx, house_link_forest.tmx, castillo_map.tmx';
 
-    var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json, dying.png, dying.json';
+    var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json';
     var items = 'item_lamp.png, item_chest.png, item_chest.json';
-    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, game_over.mp3';
+    var UI = 'hearts.png, heart.json, dialog_box.png, rupee_icon.png';
+    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, hero_hurt.mp3, heart.mp3';
+    
+    Q.scene('hud', function(stage){
+        for(let i = 0; i < 3; i++){
+            stage.insert(new Q.Heart({x: 20 + i * 20}));
+        }
+        stage.insert(new Q.Rupee());
+        stage.insert(new Q.Score());
+    }, {stage: 1});
 
-
-    Q.loadTMX(maps + ', ' + link + ', ' + enemies + ', ' + items + ', ' + sounds + ', ' + screen, function() {
+    Q.loadTMX(maps + ', ' + link + ', ' + enemies + ', ' + items + ', ' + UI + ', ' + sounds + ', ' + screen, function() {
         Q.compileSheets('link.png', 'link.json');
         Q.compileSheets('loading.sword3.png', 'loading.sword3.json');
         Q.compileSheets('sword.sword3.png', 'sword.sword3.json');
         Q.compileSheets('enemy_ganon.png', 'enemy_ganon.json');
-        Q.compileSheets('dying.png', 'dying.json');
+
         Q.compileSheets('item_chest.png', 'item_chest.json');
+        Q.compileSheets('hearts.png', 'heart.json');
 
         Q.compileSheets('intro.png', 'intro.json');
-        Q.stageScene('initialMenu');
+
+        Q.state.reset({ score: 0, lives: 3, maxLives: 3 });
+        Q.stageScene('hud');
+
+        Q.stageScene('houseLinkMap');
     });
 });

@@ -14,12 +14,7 @@ Quintus.Link = function(Q) {
                     [8, 12],
                     [-8, 12]
                 ],
-                hp: 2,
                 type: Q.SPRITE_PLAYER,
-
-                invulnerabilityTime : 1,
-                invulnerability:false,
-
                 collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_CHEST | Q.SPRITE_COLLIDER
             });
             this.add('stepControls, animation');
@@ -42,9 +37,10 @@ Quintus.Link = function(Q) {
             switch (col.obj.p.type) {
                 case Q.SPRITE_ENEMY:
                     {
-                        this.p.hp--;
-                        if (this.p.hp == 0) {
-                            this.p.sheet = 'dying';
+                        Q.state.dec("lives", 1);
+                        Q.audio.play("hero_hurt.mp3");
+
+                        if(Q.state.get('lives') === 0){
                             this.trigger('dead');
                         }
                     }
