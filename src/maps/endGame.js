@@ -12,14 +12,10 @@ Quintus.EndGame = function(Q) {
 
         var label = container.insert(new Q.UI.Text({x:0, y:0, 
                                         label: 'Press enter' }));
- 
+        confirm=true;
         Q.input.on('confirm',this,function(){
-            if(confirm){
-                console.log('house');
-                Q.clearStages();
-                Q.stageScene('houseLinkMap');
-                confirm=false;
-            }
+            Q.clearStages();
+            Q.stageScene('houseLinkMap');
         })
         container.fit(15,25);
 
