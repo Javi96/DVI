@@ -1,12 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="8" tileheight="8" infinite="0" nextobjectid="1">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="8" tileheight="8" infinite="0" nextobjectid="11">
  <tileset firstgid="1" name="castillo_bank.png" tilewidth="8" tileheight="8" tilecount="506" columns="22">
   <image source="../images/castillo_bank.png" width="176" height="184"/>
  </tileset>
- <imagelayer name="background" visible="0">
+ <tileset firstgid="507" name="collider" tilewidth="8" tileheight="8" tilecount="400" columns="20">
+  <image source="../images/collider.png" width="160" height="160"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Collider"/>
+    <property name="collision" type="bool" value="true"/>
+    <property name="from" value="houseLinkMap"/>
+    <property name="to" value="houseLinkForestMap"/>
+    <property name="xLink" type="int" value="703"/>
+    <property name="yLink" type="int" value="291"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Class" value="Collider"/>
+    <property name="collision" type="bool" value="true"/>
+    <property name="from" value="houseLinkForestMap"/>
+    <property name="to" value="houseLinkMap"/>
+    <property name="xLink" type="int" value="114"/>
+    <property name="yLink" type="int" value="147"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="907" name="Link" tilewidth="16" tileheight="24" tilecount="44" columns="11">
+  <image source="../images/link.png" width="176" height="96"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Link"/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="Class" value="Link"/>
+   </properties>
+  </tile>
+ </tileset>
+ <objectgroup name="collider">
+  <object id="2" gid="508" x="672" y="1024" width="287.818" height="8">
+   <properties>
+    <property name="from" value="castleMap"/>
+    <property name="to" value="houseLinkForestMap"/>
+    <property name="xLink" type="int" value="840"/>
+    <property name="yLink" type="int" value="26"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <imagelayer name="background">
   <image source="../images/castillo.png" width="1024" height="1024"/>
  </imagelayer>
  <layer name="ShoeBox Tile Grab" width="128" height="128">
+  <properties>
+   <property name="collision" type="bool" value="true"/>
+  </properties>
   <data>
    <tile gid="1"/>
    <tile gid="1"/>
@@ -16394,4 +16443,7 @@
    <tile gid="1"/>
   </data>
  </layer>
+ <objectgroup name="link">
+  <object id="10" gid="940" x="815.333" y="1006" width="16" height="24"/>
+ </objectgroup>
 </map>

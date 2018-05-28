@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
          * del juego.
          */
         .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX, Audio')
-        .include('HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
+        .include('CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
         .include('Link, SwordLink')
         .include('LoadDefaultEnemy, Ganon')
         .include('DefaultNPC')
@@ -35,9 +35,8 @@ window.addEventListener('load', function() {
     /**
      * Cargamos los ficheros que necesitamos para el juego.
      */
-    var confirm = false;        
     var screen = 'main_title.png, end_game.png';
-    var maps = 'house_link.tmx, house_link_forest.tmx';
+    var maps = 'house_link.tmx, house_link_forest.tmx, castillo_map.tmx';
     var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json';
     var items = 'item_lamp.png, item_chest.png, item_chest.json';
