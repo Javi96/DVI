@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
         .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX, Audio')
         .include('Hud, CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
         .include('Link, SwordLink')
-        .include('LoadDefaultEnemy, Ganon')
+        .include('LoadDefaultEnemy, Ganon, Deadrock')
         .include('DefaultNPC')
         .include('Item, Chest')
         .include('Collider, Intro')
