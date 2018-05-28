@@ -16,6 +16,10 @@ Quintus.Link = function(Q) {
                 ],
                 hp: 2,
                 type: Q.SPRITE_PLAYER,
+
+                invulnerabilityTime : 1,
+                invulnerability:false,
+
                 collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_CHEST | Q.SPRITE_COLLIDER
             });
             this.add('stepControls, animation');
@@ -40,7 +44,7 @@ Quintus.Link = function(Q) {
                     {
                         this.p.hp--;
                         if (this.p.hp == 0) {
-                            //this.p.sheet = 'dying';
+                            this.p.sheet = 'dying';
                             this.trigger('dead');
                         }
                     }

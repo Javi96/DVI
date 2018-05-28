@@ -32,6 +32,7 @@ Quintus.Ganon = function(Q) {
         getHit: function() {
             if (!this.p.invulnerability) {
                 this.p.invulnerability = true;
+                this.p.invulnerabilityTime = 1
                 this.p.hp--;
                 if (this.p.hp == 0) {
                     this.trigger('dead');
