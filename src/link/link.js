@@ -17,6 +17,8 @@ Quintus.Link = function(Q) {
                 hp: 2,
                 type: Q.SPRITE_PLAYER,
                 collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY,
+                invulnerabilityTime : 1,
+                invulnerability:false,
             });
             this.add('stepControls, animation');
             this.on('hit', 'hit');
@@ -32,6 +34,7 @@ Quintus.Link = function(Q) {
 
         hit: function(col){
             if(col.obj.p.type === Q.SPRITE_ENEMY){
+                
                 this.p.hp--;
                 if(this.p.hp == 0){
                     this.p.sheet = 'dying'

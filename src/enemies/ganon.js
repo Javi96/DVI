@@ -24,9 +24,11 @@ Quintus.Ganon = function(Q) {
                 this.p.invulnerability = false;
                 this.animate({"opacity":1}, 1);
             }else{
-                var opacity = (this.p.invulnerability == 1 ? 0 : 1);
-                this.p.invulnerabilityTime -= dt;
-                this.animate({"opacity":opacity}, 0);
+                if(this.p.invulnerability){
+                    var opacity = (this.p.invulnerability == 1 ? 0 : 1);
+                    this.p.invulnerabilityTime -= dt;
+                    this.animate({"opacity":opacity}, 0);
+                }
             }
         },
         getHit: function(){

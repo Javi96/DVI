@@ -36,7 +36,7 @@ window.addEventListener('load', function() {
      * Cargamos los ficheros que necesitamos para el juego.
      */
     var maps = 'house_link.tmx, house_link_forest.tmx';
-    var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json';
+    var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json, dying.png, dying.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json';
     var items = 'item_lamp.png, item_chest.png, item_chest.json';
     var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3';
@@ -47,9 +47,9 @@ window.addEventListener('load', function() {
         Q.compileSheets('loading.sword3.png', 'loading.sword3.json');
         Q.compileSheets('sword.sword3.png', 'sword.sword3.json');
         Q.compileSheets('enemy_ganon.png', 'enemy_ganon.json');
-
+        Q.compileSheets('dying.png', 'dying.json')
         Q.compileSheets('item_chest.png', 'item_chest.json');
 
-        Q.stageScene('houseLinkMap');
+        Q.stageScene('houseLinkForestMap');
     });
 });
