@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
          * del juego.
          */
         .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX, Audio')
-        .include('CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
+        .include('Hud, CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
         .include('Link, SwordLink')
         .include('LoadDefaultEnemy, Ganon')
         .include('DefaultNPC')
@@ -45,19 +45,6 @@ window.addEventListener('load', function() {
     var items = 'item_lamp.png, item_chest.png, item_chest.json';
     var UI = 'hearts.png, heart.json, dialog_box.png, rupee_icon.png';
     var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, hero_hurt.mp3, heart.mp3';
-    
-    Q.scene('hud', function(stage){
-        var hearts = [];
-        for(let i = 0; i < 3; i++){
-            hearts[i] = new Q.Heart({x: 20 + i * 20, num: i});
-            if(Q.state.get("maxLives") > Q.state.get("lives") && i >= Q.state.get("lives")){
-                hearts[i].p.frame = 2;
-            }
-            stage.insert(hearts[i]);
-        }
-        stage.insert(new Q.Rupee());
-        stage.insert(new Q.Score());
-    }, {stage: 1});
 
     Q.loadTMX(maps + ', ' + link + ', ' + enemies + ', ' + items + ', ' + UI + ', ' + sounds + ', ' + screen, function() {
         Q.compileSheets('link.png', 'link.json');
@@ -70,8 +57,7 @@ window.addEventListener('load', function() {
 
         Q.compileSheets('intro.png', 'intro.json');
 
-        Q.state.reset({ score: 0, lives: 3, maxLives: 3 });
-        Q.stageScene('hud');
+        
 
         Q.stageScene('initialMenu');
     });
