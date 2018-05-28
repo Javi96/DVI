@@ -16,59 +16,74 @@ Quintus.Link = function(Q) {
                 ],
                 hp: 2,
                 type: Q.SPRITE_PLAYER,
-                collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY,
+
                 invulnerabilityTime : 1,
                 invulnerability:false,
+
+                collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_CHEST | Q.SPRITE_COLLIDER
             });
             this.add('stepControls, animation');
             this.on('hit', 'hit');
-            this.on('dead', 'dead')
-            this.on('restart', 'restart')
+            this.on('dead', 'dead');
+            this.on('restart', 'restart');
         },
 
-        restart: function(){
-            this.p.sheet = 'link'
-            this.p.stepDistance = 16;
-            Q.audio.play('forest.mp3')
+        restart: function() {
+            console.log('dead');
+            Q.audio.stop();
+            Q.clearStages();
+            Q.stageScene('endGame');
+            //this.p.sheet = 'link';
+            //this.p.stepDistance = 16;
+            //Q.audio.play('forest.mp3');
         },
 
-        hit: function(col){
-            if(col.obj.p.type === Q.SPRITE_ENEMY){
-                
-                this.p.hp--;
-                if(this.p.hp == 0){
-                    this.p.sheet = 'dying'
-                    this.trigger('dead')
-                }
+        hit: function(col) {
+            switch (col.obj.p.type) {
+                case Q.SPRITE_ENEMY:
+                    {
+                        this.p.hp--;
+                        if (this.p.hp == 0) {
+                            this.p.sheet = 'dying';
+                            this.trigger('dead');
+                        }
+                    }
+                    break;
+                case Q.SPRITE_CHEST:
+                    col.obj.sensor();
+                    break;
+                case Q.SPRITE_COLLIDER:
+                    col.obj.sensor();
+                    break;
             }
         },
 
-        dead: function(){
+        dead: function() {
             this.p.stepDistance = 0;
             Q.audio.stop();
-            Q.audio.play("hero_dying.mp3")
+            Q.audio.play("hero_dying.mp3");
             this.play('dying', 1);
-            
         },
 
         step: function(dt) {
+            console.log(this.p.x, ' ', this.p.y);
             this.p.reloadSword -= dt;
             var dir = 'walking';
-            
-                if (Q.inputs['up']) {
-                    dir += '_up';
-                } else if (Q.inputs['down']) {
-                    dir += '_down';
-                }
-                if (Q.inputs['left']) {
-                    dir += '_left';
-                } else if (Q.inputs['right']) {
-                    dir += '_right';
-                }
-                if (dir !== 'walking') {
-                    this.play(dir);
-                }
-            
+
+            if (Q.inputs.up) {
+                dir += '_up';
+            } else if (Q.inputs.down) {
+                dir += '_down';
+            }
+            if (Q.inputs.left) {
+                dir += '_left';
+            } else if (Q.inputs.right) {
+                dir += '_right';
+            }
+            if (dir !== 'walking') {
+                this.play(dir);
+            }
+
             this.stage.collide(this);
         }
     });
@@ -94,6 +109,6 @@ Quintus.Link = function(Q) {
         'walking_left': { frames: [22, 23, 24, 25, 26, 27, 28, 29], rate: 1 / 16, next: 'stand_left' },
         'stand_left': { frames: [22] },
 
-        'dying' : {frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], rate: 1/8, loop:false,  trigger:"restart"}
+        'dying': { frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], rate: 1 / 8, loop: false, trigger: "restart" }
     });
 };

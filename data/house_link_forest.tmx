@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="64" tilewidth="8" tileheight="8" infinite="0" nextobjectid="23">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="128" height="64" tilewidth="8" tileheight="8" infinite="0" nextobjectid="61">
  <tileset firstgid="1" name="casa_link_bank.png" tilewidth="8" tileheight="8" tilecount="352" columns="22">
   <image source="../images/house_link_forest_bank.png" width="176" height="128"/>
  </tileset>
@@ -53,8 +53,264 @@
   </tile>
  </tileset>
  <objectgroup name="Collider">
-  <object id="16" gid="408" x="696" y="276" width="8" height="8"/>
+  <object id="16" gid="408" x="696" y="276" width="8" height="8">
+   <properties>
+    <property name="to" value="houseLinkMap"/>
+   </properties>
+  </object>
   <object id="17" gid="408" x="704" y="276" width="8" height="8"/>
+  <object id="23" gid="408" x="672.104" y="8.0625" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="25" gid="408" x="680" y="8.0625" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="26" gid="408" x="688.052" y="8.0625" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="27" gid="408" x="695.948" y="8.0625" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="28" gid="408" x="704.089" y="8.13636" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="29" gid="408" x="711.985" y="8.13636" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="30" gid="408" x="720.037" y="8.13636" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="31" gid="408" x="727.933" y="8.13636" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="32" gid="408" x="736.169" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="33" gid="408" x="744.065" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="34" gid="408" x="752.117" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="35" gid="408" x="760.013" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="36" gid="408" x="768.078" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="37" gid="408" x="775.974" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="38" gid="408" x="784.026" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="39" gid="408" x="791.922" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="40" gid="408" x="799.987" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="41" gid="408" x="807.883" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="42" gid="408" x="815.935" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="43" gid="408" x="823.831" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="44" gid="408" x="832.26" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="45" gid="408" x="840.156" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="46" gid="408" x="848.208" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="47" gid="408" x="856.104" y="8.09091" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="48" gid="408" x="864.078" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="49" gid="408" x="871.974" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="50" gid="408" x="880.026" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="51" gid="408" x="887.922" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="52" gid="408" x="896.078" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="53" gid="408" x="903.974" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="54" gid="408" x="912.026" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="55" gid="408" x="919.922" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="56" gid="408" x="928.078" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="57" gid="408" x="935.974" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="58" gid="408" x="944.026" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
+  <object id="59" gid="408" x="951.922" y="8" width="8" height="8">
+   <properties>
+    <property name="to" value="castleMap"/>
+    <property name="xLink" type="int" value="800"/>
+    <property name="yLink" type="int" value="1000"/>
+   </properties>
+  </object>
  </objectgroup>
  <imagelayer name="background" locked="1">
   <image source="../images/house_link_forest.png" width="1024" height="512"/>

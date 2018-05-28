@@ -19,5 +19,5 @@ Quintus.DefaultNPC = function(Q) {
 
     Q.Sprite.extend('smallGirl', {
 
-    })
-}
+    });
+};

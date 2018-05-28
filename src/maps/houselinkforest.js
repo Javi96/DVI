@@ -7,7 +7,7 @@ Quintus.HouseLinkForestMap = function(Q) {
         Q.stageTMX('house_link_forest.tmx', stage);
 
         var player = Q('Link').first();
-        if(stage.options.xLink){
+        if (stage.options.xLink) {
             player.p.x = stage.options.xLink;
             player.p.y = stage.options.yLink;
         }
@@ -20,5 +20,7 @@ Quintus.HouseLinkForestMap = function(Q) {
             maxX: 1024,
         });
         Q.audio.play('forest.mp3', { loop: true });
+
+        
     });
 };
