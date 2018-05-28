@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
         .include('LoadDefaultEnemy, Ganon')
         .include('DefaultNPC')
         .include('Item, Chest')
-        .include('Collider, Intro')
+        .include('Collider, Intro, GameOver')
         /**
          * Se ajusta la ventana del juego.
          */
@@ -35,14 +35,13 @@ window.addEventListener('load', function() {
     /**
      * Cargamos los ficheros que necesitamos para el juego.
      */
-    var confirm = false;        
     var screen = 'intro.png, intro.json, end_game.png';
     var maps = 'house_link.tmx, house_link_forest.tmx, castle_map.tmx';
 
     var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json, dying.png, dying.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json';
     var items = 'item_lamp.png, item_chest.png, item_chest.json';
-    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3';
+    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, game_over.mp3';
 
 
     Q.loadTMX(maps + ', ' + link + ', ' + enemies + ', ' + items + ', ' + sounds + ', ' + screen, function() {
@@ -50,7 +49,7 @@ window.addEventListener('load', function() {
         Q.compileSheets('loading.sword3.png', 'loading.sword3.json');
         Q.compileSheets('sword.sword3.png', 'sword.sword3.json');
         Q.compileSheets('enemy_ganon.png', 'enemy_ganon.json');
-        Q.compileSheets('dying.png', 'dying.json')
+        Q.compileSheets('dying.png', 'dying.json');
         Q.compileSheets('item_chest.png', 'item_chest.json');
 
         Q.compileSheets('intro.png', 'intro.json');
