@@ -47,8 +47,10 @@ window.addEventListener('load', function() {
     var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, hero_hurt.mp3, heart.mp3';
     
     Q.scene('hud', function(stage){
+        var hearts = [];
         for(let i = 0; i < 3; i++){
-            stage.insert(new Q.Heart({x: 20 + i * 20}));
+            hearts[i] = new Q.Heart({x: 20 + i * 20, num: i});
+            stage.insert(hearts[i]);
         }
         stage.insert(new Q.Rupee());
         stage.insert(new Q.Score());
