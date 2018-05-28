@@ -16,7 +16,7 @@ Quintus.Link = function(Q) {
                 ],
                 hp: 2,
                 type: Q.SPRITE_PLAYER,
-                collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_CHEST | Q.SPRITE_COLLIDER,
+                collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_CHEST | Q.SPRITE_COLLIDER
             });
             this.add('stepControls, animation');
             this.on('hit', 'hit');
@@ -25,9 +25,13 @@ Quintus.Link = function(Q) {
         },
 
         restart: function() {
-            this.p.sheet = 'link';
-            this.p.stepDistance = 16;
-            Q.audio.play('forest.mp3');
+            console.log('dead');
+            Q.audio.stop();
+            Q.clearStages();
+            Q.stageScene('endGame');
+            //this.p.sheet = 'link';
+            //this.p.stepDistance = 16;
+            //Q.audio.play('forest.mp3');
         },
 
         hit: function(col) {
@@ -36,7 +40,7 @@ Quintus.Link = function(Q) {
                     {
                         this.p.hp--;
                         if (this.p.hp == 0) {
-                            this.p.sheet = 'dying';
+                            //this.p.sheet = 'dying';
                             this.trigger('dead');
                         }
                     }
@@ -58,6 +62,7 @@ Quintus.Link = function(Q) {
         },
 
         step: function(dt) {
+            console.log(this.p.x, ' ', this.p.y);
             this.p.reloadSword -= dt;
             var dir = 'walking';
 
