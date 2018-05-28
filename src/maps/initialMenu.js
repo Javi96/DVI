@@ -18,12 +18,9 @@ Quintus.InitialMenu = function(Q) {
         }));
 
         Q.input.on('confirm', this, function() {
-            if (confirm) {
-                console.log('house');
-                Q.clearStages();
-                Q.stageScene('houseLinkMap');
-                confirm = false;
-            }
+            console.log('house');
+            Q.clearStages();
+            Q.stageScene('houseLinkMap');
         });
         container.fit(15, 25);
     });
