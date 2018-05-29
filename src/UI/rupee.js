@@ -8,7 +8,7 @@ Quintus.Rupee = function(Q) {
                 x: Q.width - 100,
                 y: 20,
                 scale: 2
-            })
+            });
         }
     });
 
@@ -29,4 +29,4 @@ Quintus.Rupee = function(Q) {
             this.p.label = "x " + score;
         }
     });
-}
+};

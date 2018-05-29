@@ -10,7 +10,7 @@ Quintus.Heart = function(Q) {
                 scale: 2,
                 type: Q.SPRITE_UI,
                 actualLives: 3
-            })
+            });
             this.add('animation');
 
             Q.state.on('change.lives', this, 'lives');
@@ -37,4 +37,4 @@ Quintus.Heart = function(Q) {
         'getHit': { frames: [1, 2], rate: 1 / 4, loop: false },
         'getHeart': { frames: [1, 0], rate: 1 / 8, loop: false }
     });
-}
+};
