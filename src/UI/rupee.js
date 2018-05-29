@@ -1,6 +1,6 @@
-Quintus.Rupee = function(Q){
+Quintus.Rupee = function(Q) {
     Q.Sprite.extend('Rupee', {
-        init: function(p){
+        init: function(p) {
             this._super(p, {
                 asset: "rupee_icon.png",
                 gravity: 0,
@@ -12,21 +12,21 @@ Quintus.Rupee = function(Q){
         }
     });
 
-    Q.UI.Text.extend("Score",{
+    Q.UI.Text.extend("Score", {
         init: function() {
-          this._super({
-            label: "x 0",
-            x: Q.width - 70,
-            y: 10,
-            color: 'white',
-            size: 18
-          });
-    
-          Q.state.on("change.score",this,"score");
+            this._super({
+                label: "x 0",
+                x: Q.width - 70,
+                y: 10,
+                color: 'white',
+                size: 18
+            });
+
+            Q.state.on("change.score", this, "score");
         },
-    
+
         score: function(score) {
-          this.p.label = "x " + score;
+            this.p.label = "x " + score;
         }
     });
 }

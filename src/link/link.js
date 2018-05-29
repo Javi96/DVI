@@ -39,7 +39,7 @@ Quintus.Link = function(Q) {
                         Q.state.dec("lives", 1);
                         Q.audio.play("hero_hurt.mp3");
                         console.log(Q.state.get("lives"));
-                        if(Q.state.get('lives') === 0){
+                        if (Q.state.get('lives') === 0) {
                             this.trigger('dead');
                         }
                     }
