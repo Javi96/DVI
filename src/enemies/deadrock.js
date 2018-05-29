@@ -32,7 +32,7 @@ Quintus.Deadrock = function(Q) {
         getHit: function() {
             if (!this.p.invulnerability) {
                 this.p.invulnerability = true;
-                this.p.invulnerabilityTime = 1
+                this.p.invulnerabilityTime = 1;
                 this.p.hp--;
                 if (this.p.hp == 0) {
                     this.trigger('dead');
@@ -42,12 +42,12 @@ Quintus.Deadrock = function(Q) {
         },
         dead: function() {
             console.log("deadrock dead");
-       }
+        }
     });
 
     Q.animations('deadrockAnim', {
         walk_left_foot: { frames: [2], next: 'walk_left_foot' },
-        walk_rigth_foot: { frames: [2], flip: true, next: 'walk_rigth_foot'}
+        walk_rigth_foot: { frames: [2], flip: true, next: 'walk_rigth_foot' }
 
 
     });

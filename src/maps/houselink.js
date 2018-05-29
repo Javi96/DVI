@@ -20,6 +20,5 @@ Quintus.HouseLinkMap = function(Q) {
             maxX: 100
         });
         Q.audio.play('forest.mp3', { loop: true });
-        
     });
 };
