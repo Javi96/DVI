@@ -23,6 +23,7 @@ Quintus.InitialMenu = function(Q) {
                 console.log('house');
                 Q.audio.stop();
                 Q.clearStages();
+                //Q.stageScene('dialog');
                 Q.state.reset({ score: 0, lives: 3, maxLives: 3 });
                 Q.stageScene('hud');
                 Q.stageScene('houseLinkMap');
