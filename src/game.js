@@ -40,7 +40,7 @@ window.addEventListener('load', function() {
     var screen = 'intro.png, intro.json, end_game.png';
     var maps = 'house_link.tmx, house_link_forest.tmx, castle_map.tmx';
 
-    var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json';
+    var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json, dying.png, dying.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json';
     var items = 'item_lamp.png, item_chest.png, item_chest.json';
     var UI = 'hearts.png, heart.json, dialog_box.png, rupee_icon.png';
@@ -68,6 +68,8 @@ window.addEventListener('load', function() {
         Q.compileSheets('hearts.png', 'heart.json');
 
         Q.compileSheets('intro.png', 'intro.json');
+        Q.compileSheets('dying.png', 'dying.json');
+
 
         //Q.stageScene('dialog');
 
