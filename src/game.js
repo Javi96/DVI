@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
         .include('LoadDefaultEnemy, Ganon, Deadrock')
         .include('DefaultNPC')
         .include('Item, Chest')
-        .include('Collider, Intro')
+        .include('Collider, Intro, GameOver')
         .include('Heart, Rupee, Dialog')
         /**
          * Se ajusta la ventana del juego.
@@ -68,7 +68,7 @@ window.addEventListener('load', function() {
         Q.compileSheets('hearts.png', 'heart.json');
 
         Q.compileSheets('intro.png', 'intro.json');
-        
+
 
         //Q.stageScene('dialog');
         
