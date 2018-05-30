@@ -12,9 +12,9 @@ window.addEventListener('load', function() {
         .include('Link, SwordLink')
         .include('LoadDefaultEnemy, Ganon, Deadrock')
         .include('DefaultNPC')
-        .include('Item, Chest')
+        .include('Item, Chest, Rupee')
         .include('Collider, Intro, GameOver')
-        .include('Heart, Rupee, Dialog')
+        .include('Heart, RupeeCount, Dialog')
         /**
          * Se ajusta la ventana del juego.
          */
@@ -32,6 +32,7 @@ window.addEventListener('load', function() {
     Q.SPRITE_ENEMY = 4;
     Q.SPRITE_CHEST = 8;
     Q.SPRITE_COLLIDER = 16;
+    Q.SPRITE_RUPEE = 32;
 
     /**
      * Cargamos los ficheros que necesitamos para el juego.
@@ -44,7 +45,7 @@ window.addEventListener('load', function() {
     var enemies = 'enemy_ganon.png, enemy_ganon.json';
     var items = 'item_lamp.png, item_chest.png, item_chest.json';
     var UI = 'hearts.png, heart.json, dialog_box.png, rupee_icon.png';
-    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, hero_hurt.mp3, heart.mp3, game_over.mp3';
+    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, hero_hurt.mp3, heart.mp3, game_over.mp3, rupee_counter.mp3';
 
     Q.scene('dialog', function(stage) {
         var txt = new Q.UI.Text({

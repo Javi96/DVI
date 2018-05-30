@@ -8,7 +8,7 @@ Quintus.Hud = function(Q) {
             }
             stage.insert(hearts[i]);
         }
-        stage.insert(new Q.Rupee());
+        stage.insert(new Q.RupeeCount());
         stage.insert(new Q.Score());
     }, { stage: 1 });
 };
