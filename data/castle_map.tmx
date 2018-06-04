@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="8" tileheight="8" infinite="0" nextobjectid="157">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="8" tileheight="8" infinite="0" nextobjectid="158">
  <tileset firstgid="1" name="castle_bank.png" tilewidth="8" tileheight="8" tilecount="506" columns="22">
   <image source="../images/castle_bank.png" width="176" height="184"/>
  </tileset>
@@ -244,6 +244,13 @@
   <object id="145" gid="510" x="952" y="1024" width="8" height="8">
    <properties>
     <property name="xLink" type="int" value="952"/>
+   </properties>
+  </object>
+  <object id="157" gid="510" x="496.833" y="255.5" width="31" height="8">
+   <properties>
+    <property name="to" value="boss"/>
+    <property name="xLink" type="int" value="239"/>
+    <property name="yLink" type="int" value="387"/>
    </properties>
   </object>
  </objectgroup>
