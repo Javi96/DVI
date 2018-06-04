@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
          * del juego.
          */
         .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX, Audio')
-        .include('Hud, CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
+        .include('ZeldaMap, BossMap, Hud, CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
         .include('Link, SwordLink')
         .include('LoadDefaultEnemy, Ganon, Deadrock')
         .include('DefaultNPC')
@@ -39,7 +39,7 @@ window.addEventListener('load', function() {
      */
     var confirm = false;
     var screen = 'intro.png, intro.json, end_game.png';
-    var maps = 'house_link.tmx, house_link_forest.tmx, castle_map.tmx';
+    var maps = 'zelda_map.tmx, interior_1_map.tmx, house_link.tmx, house_link_forest.tmx, castle_map.tmx';
 
     var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json, dying.png, dying.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json, enemy_deadrock.png, enemy_deadrock.json';
