@@ -6,17 +6,27 @@ Quintus.Rupee = function(Q) {
                 sprite: 'rupeeAnim',
                 type: Q.SPRITE_RUPEE,
                 sensor: true,
-                open: false,
+                get: false
             });
             this.add('animation');
             this.on('sensor', this, 'sensor');
-            this.play('live');
+            if (Q.state.get(this.p.id_rupee)) {
+                this.p.get = true;
+            } else {
+                Q.state.set(this.p.id_rupee, false);
+                this.play('live');
+            }
         },
         sensor: function() {
             Q.state.inc('score', 1);
+            Q.state.set(this.p.id_rupee, true);
             this.destroy();
         },
-        step: function(dt) {}
+        step: function(dt) {
+            if (this.p.get) {
+                this.destroy();
+            }
+        }
     });
 
     Q.animations('rupeeAnim', {
