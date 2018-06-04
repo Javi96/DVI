@@ -1,0 +1,10 @@
+{
+    "rupee":
+    {
+        "sx": 0,
+        "sy": 0,
+        "tileW": 8,
+        "tileH": 14,
+        "frames": 10
+    }
+}

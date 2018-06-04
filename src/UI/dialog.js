@@ -1,12 +1,12 @@
-Quintus.Dialog = function(Q){
+Quintus.Dialog = function(Q) {
     Q.Sprite.extend('Dialog', {
-        init: function(p){
+        init: function(p) {
             this._super(p, {
                 asset: 'dialog_box.png',
                 type: Q.SPRITE_UI,
-                x: Q.width/2,
+                x: Q.width / 2,
                 y: Q.height - 100
-            })
+            });
         }
     });
-}
+};

@@ -32,7 +32,7 @@ Quintus.Ganon = function(Q) {
         getHit: function() {
             if (!this.p.invulnerability) {
                 this.p.invulnerability = true;
-                this.p.invulnerabilityTime = 1
+                this.p.invulnerabilityTime = 1;
                 this.p.hp--;
                 if (this.p.hp == 0) {
                     this.trigger('dead');
@@ -48,6 +48,5 @@ Quintus.Ganon = function(Q) {
 
     Q.animations('ganonAnim', {
         walk: { frames: [5, 6], rate: 1 / 5, loop: true }
-
     });
 };

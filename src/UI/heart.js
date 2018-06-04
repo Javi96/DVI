@@ -1,6 +1,6 @@
-Quintus.Heart = function(Q){
+Quintus.Heart = function(Q) {
     Q.Sprite.extend('Heart', {
-        init: function(p){
+        init: function(p) {
             this._super(p, {
                 sheet: 'heart',
                 sprite: 'heartAnim',
@@ -10,20 +10,20 @@ Quintus.Heart = function(Q){
                 scale: 2,
                 type: Q.SPRITE_UI,
                 actualLives: 3
-            })
+            });
             this.add('animation');
 
             Q.state.on('change.lives', this, 'lives');
         },
 
-        lives: function(lives){
-            if(this.p.num === lives){
-                if(this.p.actualLives >  lives){
+        lives: function(lives) {
+            if (this.p.num === lives) {
+                if (this.p.actualLives > lives) {
                     this.play('getHit');
-                }else if(this.p.actualLives <  lives){
-                    if(maxLives >= lives){
+                } else if (this.p.actualLives < lives) {
+                    if (maxLives >= lives) {
                         this.play('getHeart');
-                    }else{
+                    } else {
                         Q.state.set('lives', maxLives);
                     }
                     Q.audio.play('heart.mp3');
@@ -34,7 +34,7 @@ Quintus.Heart = function(Q){
     });
 
     Q.animations('heartAnim', {
-        'getHit':{ frames: [1, 2], rate: 1 / 4, loop: false },
-        'getHeart':{ frames: [1, 0], rate: 1 / 8, loop: false }
+        'getHit': { frames: [1, 2], rate: 1 / 4, loop: false },
+        'getHeart': { frames: [1, 0], rate: 1 / 8, loop: false }
     });
-}
+};
