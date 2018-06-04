@@ -76,6 +76,6 @@ window.addEventListener('load', function() {
 
         //Q.stageScene('dialog');
 
-        Q.stageScene('initialMenu');
+        Q.stageScene('houseLinkForestMap');
     });
 });
