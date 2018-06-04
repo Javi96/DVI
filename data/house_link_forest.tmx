@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="64" tilewidth="8" tileheight="8" infinite="0" nextobjectid="109">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="64" tilewidth="8" tileheight="8" infinite="0" nextobjectid="110">
  <tileset firstgid="1" name="casa_link_bank.png" tilewidth="8" tileheight="8" tilecount="352" columns="22">
   <image source="../images/house_link_forest_bank.png" width="176" height="128"/>
  </tileset>
@@ -75,6 +75,14 @@
   <tile id="0">
    <properties>
     <property name="Class" value="Rupee"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="837" name="enemy_deadrock" tilewidth="16" tileheight="16" tilecount="4" columns="4">
+  <image source="../images/enemy_deadrock.png" width="64" height="16"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Deadrock"/>
    </properties>
   </tile>
  </tileset>
@@ -16731,7 +16739,8 @@
  <objectgroup name="Link">
   <object id="12" gid="386" x="695" y="303" width="16" height="24"/>
  </objectgroup>
- <objectgroup name="Ganon">
+ <objectgroup name="Enemy">
   <object id="10" gid="406" x="483.667" y="309" width="48" height="40"/>
+  <object id="109" gid="837" x="904" y="349.333" width="16" height="16"/>
  </objectgroup>
 </map>

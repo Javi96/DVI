@@ -7,7 +7,6 @@ Quintus.Deadrock = function(Q) {
                 sprite: 'deadrockAnim',
                 hp: 1,
                 type: Q.SPRITE_ENEMY,
-                name: 'deadrock',
                 invulnerabilityTime: 1,
                 invulnerability: false,
             });
@@ -16,9 +15,9 @@ Quintus.Deadrock = function(Q) {
             this.on('dead', 'dead');
         },
         step: function(dt) {
-            if (!this.p.dead) {
-                this.play('walk_left_foot');
-            }
+
+            this.play('walk_left_foot');
+
             if (this.p.invulnerabilityTime <= 0) {
                 this.p.invulnerabilityTime = 1;
                 this.p.invulnerability = false;
@@ -46,9 +45,7 @@ Quintus.Deadrock = function(Q) {
     });
 
     Q.animations('deadrockAnim', {
-        walk_left_foot: { frames: [2], next: 'walk_left_foot' },
-        walk_rigth_foot: { frames: [2], flip: true, next: 'walk_rigth_foot' }
-
-
+        walk_left_foot: { frames: [0, 1], rate: 1 / 10, loop: true },
+        walk_rigth_foot: { frames: [0, 1], flip: true, rate: 1 / 10, loop: true }
     });
 };
