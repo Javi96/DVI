@@ -45,7 +45,7 @@
   </tile>
  </tileset>
  <imagelayer name="bg" offsetx="0" offsety="-4">
-  <image source="interior_1.png"/>
+  <image source="../images/interior_1.png" width="496" height="464"/>
  </imagelayer>
  <layer name="ShoeBox Tile Grab" width="62" height="57">
   <properties>
