@@ -16672,17 +16672,61 @@
   </data>
  </layer>
  <objectgroup name="Rupee">
-  <object id="97" gid="807" x="759.333" y="299.667" width="8" height="14"/>
-  <object id="98" gid="807" x="845.333" y="384.333" width="8" height="14"/>
-  <object id="99" gid="807" x="853.333" y="272.333" width="8" height="14"/>
-  <object id="100" gid="807" x="830.667" y="154.333" width="8" height="14"/>
-  <object id="101" gid="807" x="739.333" y="90.3333" width="8" height="14"/>
-  <object id="102" gid="807" x="795.333" y="63.6667" width="8" height="14"/>
-  <object id="103" gid="807" x="746" y="435.667" width="8" height="14"/>
-  <object id="104" gid="807" x="595.333" y="397.667" width="8" height="14"/>
-  <object id="105" gid="807" x="492" y="413.667" width="8" height="14"/>
-  <object id="106" gid="807" x="554.667" y="199" width="8" height="14"/>
-  <object id="108" gid="807" x="957.333" y="399.667" width="8" height="14"/>
+  <object id="97" gid="807" x="759.333" y="299.667" width="8" height="14">
+   <properties>
+    <property name="id_rupee" value="Rupee1"/>
+   </properties>
+  </object>
+  <object id="98" gid="807" x="845.333" y="384.333" width="8" height="14">
+   <properties>
+    <property name="id_rupee" value="Rupee6"/>
+   </properties>
+  </object>
+  <object id="99" gid="807" x="853.333" y="272.333" width="8" height="14">
+   <properties>
+    <property name="id_rupee" value="Rupee8"/>
+   </properties>
+  </object>
+  <object id="100" gid="807" x="830.667" y="154.333" width="8" height="14">
+   <properties>
+    <property name="id_rupee" value="Rupee9"/>
+   </properties>
+  </object>
+  <object id="101" gid="807" x="739.333" y="90.3333" width="8" height="14">
+   <properties>
+    <property name="id_rupee" value="Rupee10"/>
+   </properties>
+  </object>
+  <object id="102" gid="807" x="795.333" y="63.6667" width="8" height="14">
+   <properties>
+    <property name="id_rupee" value="Rupee11"/>
+   </properties>
+  </object>
+  <object id="103" gid="807" x="746" y="435.667" width="8" height="14">
+   <properties>
+    <property name="id_rupee" value="Rupee5"/>
+   </properties>
+  </object>
+  <object id="104" gid="807" x="595.333" y="397.667" width="8" height="14">
+   <properties>
+    <property name="id_rupee" value="Rupee2"/>
+   </properties>
+  </object>
+  <object id="105" gid="807" x="492" y="413.667" width="8" height="14">
+   <properties>
+    <property name="id_rupee" value="Rupee3"/>
+   </properties>
+  </object>
+  <object id="106" gid="807" x="554.667" y="199" width="8" height="14">
+   <properties>
+    <property name="id_rupee" value="Rupee4"/>
+   </properties>
+  </object>
+  <object id="108" gid="807" x="957.333" y="399.667" width="8" height="14">
+   <properties>
+    <property name="id_rupee" value="Rupee7"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="Link">
   <object id="12" gid="386" x="695" y="303" width="16" height="24"/>
