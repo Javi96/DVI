@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
     var enemies = 'enemy_ganon.png, enemy_ganon.json, enemy_deadrock.png, enemy_deadrock.json, enemy_killed.png, enemy_killed.json';
     var items = 'item_lamp.png, item_chest.png, item_chest.json';
     var UI = 'hearts.png, heart.json, dialog_box.png, rupee_icon.png';
-    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, hero_hurt.mp3, heart.mp3, game_over.mp3, rupee_counter.mp3';
+    var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, hero_hurt.mp3, heart.mp3, game_over.mp3, rupee_counter.mp3, enemy_hurt.mp3, enemy_killed.mp3';
 
     Q.scene('dialog', function(stage) {
         var txt = new Q.UI.Text({

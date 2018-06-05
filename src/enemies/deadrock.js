@@ -5,6 +5,7 @@ Quintus.Deadrock = function(Q) {
             this._super(p, {
                 sheet: 'deadrockWalk',
                 sprite: 'deadrockAnim',
+                type: Q.SPRITE_ENEMY,
                 hp: 2,
                 vx: 50,
                 direction: 'left',

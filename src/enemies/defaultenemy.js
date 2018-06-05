@@ -2,8 +2,6 @@ Quintus.LoadDefaultEnemy = function(Q) {
     Q.component('defaultEnemy', {
         defaults: {
             dead: false,
-            type: Q.SPRITE_ENEMY,
-            collisionMask: Q.SPRITE_PLAYER | Q.SPRITE_DEFAULT,
             gravity: 0,
             invicibleTime: 1,
             invicible: 0
@@ -21,8 +19,10 @@ Quintus.LoadDefaultEnemy = function(Q) {
                 this.entity.p.hp--;
 
                 if (this.entity.p.hp == 0) {
+                    Q.audio.play('enemy_killed.mp3');
                     this.entity.trigger('dead');
                 } else {
+                    Q.audio.play('enemy_hurt.mp3');
                     this.entity.animate({ opacity: 0 }, 0.5);
                     this.entity.animate({ opacity: 1 }, 0.5, { delay: 0.5 });
                 }
