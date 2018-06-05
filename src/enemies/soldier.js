@@ -1,10 +1,10 @@
-Quintus.Deadrock = function(Q) {
+Quintus.Soldier = function(Q) {
 
-    Q.Sprite.extend('Deadrock', {
+    Q.Sprite.extend('Soldier', {
         init: function(p) {
             this._super(p, {
-                sheet: 'deadrockWalk',
-                sprite: 'deadrockAnim',
+                sheet: 'soldierWalk',
+                sprite: 'soldierAnim',
                 type: Q.SPRITE_ENEMY,
                 hp: 2,
                 vx: 50,
@@ -31,7 +31,7 @@ Quintus.Deadrock = function(Q) {
         }
     });
 
-    Q.animations('deadrockAnim', {
+    Q.animations('soldierAnim', {
         walk_left_foot: { frames: [0, 1], rate: 1 / 10, loop: true },
         walk_right_foot: { frames: [0, 1], flip: 'x', rate: 1 / 10, loop: true }
     });

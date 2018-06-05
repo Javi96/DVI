@@ -1,0 +1,10 @@
+{
+    "soldierWalk":
+    {
+        "sx": 0,
+        "sy": 0,
+        "tileW": 18,
+        "tileH": 28,
+        "frames": 16
+    }
+}

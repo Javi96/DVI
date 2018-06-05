@@ -5,8 +5,8 @@ Quintus.Ganon = function(Q) {
             this._super(p, {
                 sheet: 'ganonWalk',
                 sprite: 'ganonAnim',
-                hp: 3,
-                type: Q.SPRITE_ENEMY
+                type: Q.SPRITE_ENEMY,
+                hp: 3
             });
             this.add('defaultEnemy');
             this.on('dead', this, 'dead');
@@ -18,8 +18,10 @@ Quintus.Ganon = function(Q) {
             }
         },
         dead: function() {
-            console.log("Oh no, maldito seas scooby dooooooo");
-            console.log("uy fallo de juego");
+            var obj = this.stage.insert(new Q.EnemyKilled({ x: this.p.x, y: this.p.y }));
+            Q.state.inc('score', 100);
+            Q.state.set(this.p.id_enemy, true);
+            this.destroy();
         }
     });
 
