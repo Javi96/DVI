@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
         .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX, Audio')
         .include('ZeldaMap, BossMap, Hud, CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
         .include('Link, SwordLink')
-        .include('LoadDefaultEnemy, Ganon, Deadrock')
+        .include('LoadDefaultEnemy, Ganon, Deadrock, EnemyKilled')
         .include('DefaultNPC')
         .include('Item, Chest, Rupee')
         .include('Collider, Intro, GameOver')
@@ -42,7 +42,7 @@ window.addEventListener('load', function() {
     var maps = 'zelda_map.tmx, interior_1_map.tmx, house_link.tmx, house_link_forest.tmx, castle_map.tmx';
 
     var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json, dying.png, dying.json';
-    var enemies = 'enemy_ganon.png, enemy_ganon.json, enemy_deadrock.png, enemy_deadrock.json';
+    var enemies = 'enemy_ganon.png, enemy_ganon.json, enemy_deadrock.png, enemy_deadrock.json, enemy_killed.png, enemy_killed.json';
     var items = 'item_lamp.png, item_chest.png, item_chest.json';
     var UI = 'hearts.png, heart.json, dialog_box.png, rupee_icon.png';
     var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, hero_hurt.mp3, heart.mp3, game_over.mp3, rupee_counter.mp3';
@@ -66,6 +66,7 @@ window.addEventListener('load', function() {
 
         Q.compileSheets('enemy_ganon.png', 'enemy_ganon.json');
         Q.compileSheets('enemy_deadrock.png', 'enemy_deadrock.json');
+        Q.compileSheets('enemy_killed.png', 'enemy_killed.json');
 
         Q.compileSheets('item_chest.png', 'item_chest.json');
         Q.compileSheets('hearts.png', 'heart.json');

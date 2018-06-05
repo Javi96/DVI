@@ -4,27 +4,27 @@ Quintus.LoadDefaultEnemy = function(Q) {
             dead: false,
             type: Q.SPRITE_ENEMY,
             collisionMask: Q.SPRITE_PLAYER | Q.SPRITE_DEFAULT,
-            gravity: 0
+            gravity: 0,
+            invicibleTime: 1,
+            invicible: 0
         },
 
         added: function() {
-            var p = this.entity.p;
-
-            Q._defaults(p, this.defaults);
-
+            Q._defaults(this.entity.p, this.defaults);
             this.entity.add('animation, tween');
+            this.entity.on('kicked', this, 'kicked');
         },
 
-        hit: function(col) {
-            var p = this.entity.p;
-            if (col.obj.isA('Player') && !col.obj.dead) {
-                if (col.obj.sword) {
-                    col.obj.trigger('hit');
+        kicked: function() {
+            if (this.entity.p.invicible < 0) {
+                this.entity.p.invicible = this.entity.p.invicibleTime;
+                this.entity.p.hp--;
+
+                if (this.entity.p.hp == 0) {
+                    this.entity.trigger('dead');
                 } else {
-                    p.hp--;
-                    if (p.hp == 0) {
-                        p.dead = true;
-                    }
+                    this.entity.animate({ opacity: 0 }, 0.5);
+                    this.entity.animate({ opacity: 1 }, 0.5, { delay: 0.5 });
                 }
             }
         }
