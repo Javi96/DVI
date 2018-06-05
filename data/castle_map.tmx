@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="8" tileheight="8" infinite="0" nextobjectid="161">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="8" tileheight="8" infinite="0" nextobjectid="162">
  <tileset firstgid="1" name="castle_bank.png" tilewidth="8" tileheight="8" tilecount="506" columns="22">
   <image source="../images/castle_bank.png" width="176" height="184"/>
  </tileset>
@@ -70,6 +70,14 @@
   <tile id="0">
    <properties>
     <property name="Class" value="Deadrock"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="985" name="enemy_soldier" tilewidth="18" tileheight="28" tilecount="15" columns="15">
+  <image source="../images/enemy_soldier.png" width="286" height="28"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Soldier"/>
    </properties>
   </tile>
  </tileset>
@@ -33111,6 +33119,7 @@
     <property name="id_enemy" value="Deadrock6"/>
    </properties>
   </object>
+  <object id="161" gid="985" x="503" y="414" width="18" height="28"/>
  </objectgroup>
  <objectgroup name="Link">
   <object id="10" gid="940" x="832.583" y="999.75" width="16" height="24"/>

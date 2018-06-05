@@ -10,7 +10,7 @@ Quintus.Soldier = function(Q) {
                 vx: 50,
                 direction: 'left',
             });
-            this.add('defaultEnemy, 2d, aiBounce');
+            this.add('defaultEnemy, 2d');
             this.on('dead', this, 'dead');
         },
         step: function(dt) {
