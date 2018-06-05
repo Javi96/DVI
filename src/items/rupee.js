@@ -10,12 +10,8 @@ Quintus.Rupee = function(Q) {
             });
             this.add('animation');
             this.on('sensor', this, 'sensor');
-            if (Q.state.get(this.p.id_rupee)) {
-                this.p.get = true;
-            } else {
-                Q.state.set(this.p.id_rupee, false);
-                this.play('live');
-            }
+            
+            this.play('live');
         },
         sensor: function() {
             Q.state.inc('score', 1);
@@ -23,7 +19,7 @@ Quintus.Rupee = function(Q) {
             this.destroy();
         },
         step: function(dt) {
-            if (this.p.get) {
+            if (Q.state.get(this.p.id_rupee)) {
                 this.destroy();
             }
         }

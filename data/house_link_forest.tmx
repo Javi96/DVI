@@ -16740,7 +16740,15 @@
   <object id="12" gid="386" x="695" y="303" width="16" height="24"/>
  </objectgroup>
  <objectgroup name="Enemy">
-  <object id="10" gid="406" x="483.667" y="309" width="48" height="40"/>
-  <object id="109" gid="837" x="904" y="349.333" width="16" height="16"/>
+  <object id="10" gid="406" x="483.667" y="309" width="48" height="40">
+   <properties>
+    <property name="id_enemy" value="Ganon"/>
+   </properties>
+  </object>
+  <object id="109" gid="837" x="904" y="349.333" width="16" height="16">
+   <properties>
+    <property name="id_enemy" value="Deadrock1"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

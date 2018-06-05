@@ -61,7 +61,7 @@ Quintus.SwordLink = function(Q) {
         },
 
         hit: function(col) {
-            col.obj.trigger('getHit');
+            col.obj.trigger('kicked');
             //gameObject.p.getHit(this.p.dmg);
         },
 

@@ -5,44 +5,28 @@ Quintus.Deadrock = function(Q) {
             this._super(p, {
                 sheet: 'deadrockWalk',
                 sprite: 'deadrockAnim',
-                hp: 1,
-                gravity: 0,
-                vx: 100,
+                hp: 2,
+                vx: 50,
                 direction: 'left',
-                type: Q.SPRITE_ENEMY,
-                invulnerabilityTime: 1,
-                invulnerability: false,
             });
-            this.add('2d, defaultEnemy, aiBounce');
-            this.on('getHit', 'getHit');
-            this.on('dead', 'dead');
+            this.add('defaultEnemy, 2d, aiBounce');
+            this.on('dead', this, 'dead');
         },
         step: function(dt) {
+            this.p.invicible -= dt;
+            this.p.direction = (this.p.vx > 0) ? 'right' : 'left';
+
             this.play('walk_' + this.p.direction + '_foot');
 
-            if (this.p.invulnerabilityTime <= 0) {
-                this.p.invulnerabilityTime = 1;
-                this.p.invulnerability = false;
-                this.animate({ 'opacity': 1 }, 1);
-            } else {
-                var opacity = (this.p.invulnerability == 1 ? 0 : 1);
-                this.p.invulnerabilityTime -= dt;
-                this.animate({ 'opacity': opacity }, 0);
-            }
-        },
-        getHit: function() {
-            if (!this.p.invulnerability) {
-                this.p.invulnerability = true;
-                this.p.invulnerabilityTime = 1;
-                this.p.hp--;
-                if (this.p.hp == 0) {
-                    this.trigger('dead');
-                }
-
+            if (Q.state.get(this.p.id_enemy)) {
+                this.destroy();
             }
         },
         dead: function() {
-            console.log("deadrock dead");
+            var obj = this.stage.insert(new Q.EnemyKilled({ x: this.p.x, y: this.p.y }));
+            Q.state.inc('score', 5);
+            Q.state.set(this.p.id_enemy, true);
+            this.destroy();
         }
     });
 
