@@ -66,7 +66,7 @@ window.addEventListener('load', function() {
 
         Q.compileSheets('enemy_ganon.png', 'enemy_ganon.json');
         Q.compileSheets('enemy_deadrock.png', 'enemy_deadrock.json');
-        Q.compileSheets('enemy_deadrock.png', 'enemy_deadrock.json');
+        Q.compileSheets('enemy_soldier.png', 'enemy_soldier.json');
         Q.compileSheets('enemy_killed.png', 'enemy_killed.json');
 
         Q.compileSheets('item_chest.png', 'item_chest.json');

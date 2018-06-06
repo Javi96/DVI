@@ -5,14 +5,14 @@ Quintus.Deadrock = function(Q) {
             this._super(p, {
                 sheet: 'deadrockWalk',
                 sprite: 'deadrockAnim',
-                type: Q.SPRITE_ENEMY,
-                hp: 2,
+                hp: 1,
                 vx: 50,
                 direction: 'left',
+                score: 5
             });
             this.add('defaultEnemy, 2d, aiBounce');
-            this.on('dead', this, 'dead');
         },
+
         step: function(dt) {
             this.p.invicible -= dt;
             this.p.direction = (this.p.vx > 0) ? 'right' : 'left';
@@ -22,12 +22,6 @@ Quintus.Deadrock = function(Q) {
             if (Q.state.get(this.p.id_enemy)) {
                 this.destroy();
             }
-        },
-        dead: function() {
-            var obj = this.stage.insert(new Q.EnemyKilled({ x: this.p.x, y: this.p.y }));
-            Q.state.inc('score', 5);
-            Q.state.set(this.p.id_enemy, true);
-            this.destroy();
         }
     });
 
