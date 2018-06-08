@@ -7,8 +7,6 @@ Quintus.DefaultNPC = function(Q) {
 
         added: function() {
             this.entity.p.type = Q.SPRITE_NPC;
-            //this.entity.p.sensor = true;
-            console.log("hola");
             Q._defaults(this.entity.p, this.defaults);
 
             this.entity.add('animation, tween');
