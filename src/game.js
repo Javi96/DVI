@@ -11,14 +11,14 @@ window.addEventListener('load', function() {
         .include('ZeldaMap, BossMap, Hud, CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
         .include('Link, SwordLink')
         .include('LoadDefaultEnemy, Ganon, Deadrock, Soldier, EnemyKilled')
-        .include('DefaultNPC, Uncle, Zelda')
+        .include('DefaultNPC, Uncle, Zelda, Guard')
         .include('Item, Chest, Rupee')
         .include('Collider, Intro, GameOver, Talking')
         .include('Heart, RupeeCount, Dialog')
         /**
          * Se ajusta la ventana del juego.
          */
-        .setup({ width: 569, heigth: 315 })
+        .setup({ width: 450, heigth: 300 })
         /**
          * Se le añade funcionalidad.
          */
