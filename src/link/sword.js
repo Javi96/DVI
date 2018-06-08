@@ -58,6 +58,9 @@ Quintus.SwordLink = function(Q) {
                 this.play('sword_atack' + this.p.direction); //
 
             }
+            if (Q.state.get('lives') === 0) { 
+                this.destroy();
+            }
         },
 
         hit: function(col) {
