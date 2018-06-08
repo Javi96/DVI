@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
         /**
          * Se ajusta la ventana del juego.
          */
-        .setup({ width: 569, heigth: 315 })
+        .setup({ width: 450, heigth: 300 })
         /**
          * Se le añade funcionalidad.
          */
@@ -81,6 +81,6 @@ window.addEventListener('load', function() {
 
         //Q.stageScene('dialog');
 
-        Q.stageScene('boss');
+        Q.stageScene('initialMenu');
     });
 });
