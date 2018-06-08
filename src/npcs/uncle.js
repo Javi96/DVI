@@ -5,7 +5,7 @@ Quintus.Uncle = function(Q) {
             this._super(p, {
                 x: 20,
                 y: 20,
-                sheet: 'npcs',
+                sheet: 'uncle',
                 sprite: 'uncleAnim',
                 gravity: 0,
                 dead: false,
