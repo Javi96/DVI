@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
         .include('ZeldaMap, BossMap, Hud, CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
         .include('Link, SwordLink')
         .include('LoadDefaultEnemy, Ganon, Deadrock, Soldier, EnemyKilled')
-        .include('DefaultNPC, Uncle, Zelda')
+        .include('DefaultNPC, Uncle')
         .include('Item, Chest, Rupee')
         .include('Collider, Intro, GameOver')
         .include('Heart, RupeeCount, Dialog')
