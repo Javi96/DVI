@@ -15,7 +15,7 @@ Quintus.Link = function(Q) {
                     [-8, 12]
                 ],
                 type: Q.SPRITE_PLAYER,
-                collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_CHEST | Q.SPRITE_COLLIDER | Q.SPRITE_RUPEE,
+                collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_CHEST | Q.SPRITE_COLLIDER | Q.SPRITE_RUPEE | Q.SPRITE_NPC,
                 invulnerabilityTime: 1,
                 invulnerability: false,
             });
@@ -53,6 +53,9 @@ Quintus.Link = function(Q) {
                 case Q.SPRITE_COLLIDER:
                 case Q.SPRITE_RUPEE:
                     col.obj.sensor();
+                    break;
+                case Q.SPRITE_NPC:
+                    col.obj.trigger('sensor');
                     break;
             }
         },
