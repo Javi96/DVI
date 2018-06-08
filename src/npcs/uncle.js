@@ -3,8 +3,6 @@ Quintus.Uncle = function(Q) {
     Q.Sprite.extend('Uncle', {
         init: function(p) {
             this._super(p, {
-                x: 20,
-                y: 20,
                 sheet: 'uncle',
                 sprite: 'uncleAnim',
                 gravity: 0,
@@ -14,24 +12,31 @@ Quintus.Uncle = function(Q) {
                 ],
                 specDialog: "I feel so tired..."
             });
-            this.add('defaultNPC, 2d, animation, tween');
+            this.add('defaultNPC, animation, tween');
+            this.on('talk', this, 'talk');
         },
 
-        sensor: function() {
-            if (this.p.sensor) {
-                if (!this.p.dead) {
-                    this.talk();
-                } else {
-                    Q.state.set('dialog', this.p.specDialog);
-                    Q.stageScene('dialog');
-                    //Q.clearStage(2);
+        step: function(dt){
+            this.play('stand');
+        },
+
+        talk: function() {
+            if (!this.p.dead) {
+                for (let i in this.p.dialog) {
+                    Q.state.set('dialog', this.p.dialog[i]);
+                    Q.stageScene('talking');
                 }
+                this.p.dead = true;
+            } else {
+                Q.state.set('dialog', this.p.specDialog);
+                Q.stageScene('talking');
             }
+            //Q.clearStage(2);           
         }
 
     });
 
     Q.animations('uncleAnim', {
-        'stand': { frames: [35] }
+        'stand': { frames: [0] }
     });
 };
