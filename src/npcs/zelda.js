@@ -1,21 +1,22 @@
-Quintus.Zelda = function(Q){
-    
+Quintus.Zelda = function(Q) {
+
     Q.Sprite.extend('Zelda', {
-        init: function(p){
+        init: function(p) {
             this._super(p, {
                 sheet: 'npcs',
                 sprite: 'zeldaAnim',
                 gravity: 0,
                 type: Q.SPRITE_NONE,
                 dialog: ["Thank you, Link! You saved me!",
-                        "Now Hyrule will live in peace forever."]
-            })
+                    "Now Hyrule will live in peace forever."
+                ]
+            });
             this.add('defaultNPC, animation, tween');
         },
-        step: function(dt){
-            if(Q.state.get('end')){
+        step: function(dt) {
+            if (Q.state.get('end')) {
                 this.play('walking');
-                this.animate({y: p.y + 100}, 3, {delay: 2});
+                this.animate({ y: p.y + 100 }, 3, { delay: 2 });
                 this.play('stand');
                 this.talk();
             }
@@ -25,7 +26,7 @@ Quintus.Zelda = function(Q){
     });
 
     Q.animations('zeldaAnim', {
-        'walking': {frames: [48, 49], rate: 1/8, next: 'stand'},
-        'stand': {frames: [48]}
+        'walking': { frames: [48, 49], rate: 1 / 8, next: 'stand' },
+        'stand': { frames: [48] }
     });
-}
+};

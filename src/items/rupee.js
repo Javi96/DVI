@@ -10,7 +10,7 @@ Quintus.Rupee = function(Q) {
             });
             this.add('animation');
             this.on('sensor', this, 'sensor');
-            
+
             this.play('live');
         },
         sensor: function() {
