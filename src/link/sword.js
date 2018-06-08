@@ -46,16 +46,17 @@ Quintus.SwordLink = function(Q) {
             if (Q.inputs.fire && !this.p.atack) {
                 this.p.atack = true;
                 Q.audio.play('sword1.mp3');
-                this.stage.collide(this);
                 this.p.sheet = "atack_sword";
                 this.p.originX = this.p.cx;
                 this.p.originY = this.p.cy;
-                this.p.cx += 24;
-                this.p.cy += 8; //tengo que hacer eso y cuadrarla a jo
+                setSwordPos(this.p);
+                
+                this.play('sword_atack' + this.p.direction);
 
             }
             if (this.p.atack) {
-                this.play('sword_atack' + this.p.direction); //
+                this.stage.collide(this);
+                
 
             }
         },
@@ -78,7 +79,7 @@ Quintus.SwordLink = function(Q) {
         'sword_atack_up': { frames: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], rate: 1 / 18, loop: false, trigger: 'restart', next: 'sword_up_stop' },
         'sword_atack_left': { frames: [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], loop: false, trigger: 'restart', rate: 1 / 18, next: 'sword_left_stop' },
         'sword_atack_down': { frames: [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47], rate: 1 / 18, loop: false, trigger: 'restart', next: 'sword_down_stop' },
-        'sword_right': { frames: [0, 1, 2, 3, 4, 5], rate: 1 / 16, next: 'sword_right' },
+        'sword_right': { frames: [0, 1, 2, 3, 4, 5], rate: 1 / 16, next: 'sword_right_stop' },
         'sword_right_stop': { frames: [0] },
         'sword_up': { frames: [6, 7, 8, 9, 10, 11], rate: 1 / 16, next: 'sword_up_stop' },
         'sword_up_stop': { frames: [6] },
@@ -96,3 +97,25 @@ Quintus.SwordLink = function(Q) {
         'sword_down_left_stop': { frames: [18] },
     });
 };
+
+function setSwordPos(p){
+    console.log("noooo")
+    switch(p.direction){
+        case "_right":
+            p.cx += 20;
+            p.cy += 8; 
+            break
+        case "_left":
+            p.cx += 14;
+            p.cy += 8;
+            break;
+        case "_up":
+            p.cx += 16;
+            p.cy += 8;
+            break;
+        case "_down":
+            p.cx += 16;
+            p.cy += 12;
+            break;
+    }   
+}

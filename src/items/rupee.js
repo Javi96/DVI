@@ -5,6 +5,7 @@ Quintus.Rupee = function(Q) {
                 sheet: 'rupee',
                 sprite: 'rupeeAnim',
                 type: Q.SPRITE_RUPEE,
+                collisionMask: Q.SPRITE_DEFAULT,
                 sensor: true,
                 get: false
             });

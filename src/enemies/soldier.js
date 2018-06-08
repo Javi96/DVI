@@ -10,7 +10,9 @@ Quintus.Soldier = function(Q) {
                 direction: 'down',
                 vSoldier: 40,
                 tileSize: 8,
-                score: 10
+                score: 10,
+                collisionMask: Q.SPRITE_DEFAULT,
+                type: Q.SPRITE_ENEMY,
             });
             this.add('defaultEnemy, 2d');
             this.on('check', this, 'check');
