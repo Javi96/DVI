@@ -6,7 +6,7 @@ Quintus.Link = function(Q) {
                 sheet: 'link',
                 sprite: 'linkAnim',
                 gravity: 0,
-                stepDistance: 16, // should be tile size
+                stepDistance: 8, // should be tile size
                 stepDelay: 0.2, // seconds to delay before next step
                 points: [
                     [-8, -3],
