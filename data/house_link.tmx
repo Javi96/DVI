@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="28" height="22" tilewidth="8" tileheight="8" infinite="0" nextobjectid="89">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="28" height="22" tilewidth="8" tileheight="8" infinite="0" nextobjectid="90">
  <tileset firstgid="1" name="house_link_bank" tilewidth="8" tileheight="8" tilecount="6400" columns="80">
   <image source="../images/house_link_bank.png" width="640" height="640"/>
  </tileset>
@@ -63,6 +63,14 @@
     <property name="from" value="castleMap"/>
     <property name="to" value="houseLinkForestMap"/>
     <property name="yLink" type="int" value="24"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="6847" name="uncle" tilewidth="28" tileheight="28" tilecount="1" columns="1">
+  <image source="../images/uncle.png" width="28" height="28"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Uncle"/>
    </properties>
   </tile>
  </tileset>
@@ -2572,5 +2580,6 @@
  </objectgroup>
  <objectgroup name="Link">
   <object id="66" gid="6401" x="74.5455" y="63.8182" width="16" height="24"/>
+  <object id="89" gid="6847" x="106.5" y="60" width="28" height="28"/>
  </objectgroup>
 </map>
