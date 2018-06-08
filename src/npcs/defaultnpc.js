@@ -13,11 +13,23 @@ Quintus.DefaultNPC = function(Q) {
             Q._defaults(p, this.defaults);
 
             this.entity.add('2d, animation, tween');
-            this.entity.on('step', this, 'step');
+            this.entity.on('sensor', this, 'sensor');
+        },
+
+        sensor: function(){
+            if(this.p.sensor){
+                this.entity.play('stand');
+                this.entity.talk();
+            }
+        },
+
+        talk: function(){
+            for (i in this.entity.p.dialog){
+                Q.state.set('dialog', i);
+                Q.stageScene('dialog');
+
+            }
+            //Q.clearStage(2);
         }
-    });
-
-    Q.Sprite.extend('smallGirl', {
-
     });
 };
