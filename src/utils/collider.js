@@ -4,6 +4,7 @@ Quintus.Collider = function(Q) {
             this._super(p, {
                 asset: 'item_lamp.png',
                 sensor: true,
+                
                 type: Q.SPRITE_COLLIDER
             });
             this.on('sensor', this, 'sensor');

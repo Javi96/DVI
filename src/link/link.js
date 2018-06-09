@@ -5,7 +5,6 @@ Quintus.Link = function(Q) {
             this._super(p, {
                 sheet: 'link',
                 sprite: 'linkAnim',
-                gravity: 0,
                 stepDistance: 16, // should be tile size
                 stepDelay: 0.2, // seconds to delay before next step
                 points: [
@@ -29,9 +28,6 @@ Quintus.Link = function(Q) {
             Q.audio.stop();
             Q.clearStages();
             Q.stageScene('endGame');
-            //this.p.sheet = 'link';
-            //this.p.stepDistance = 16;
-            //Q.audio.play('forest.mp3');
         },
 
         hit: function(col) {
@@ -66,6 +62,7 @@ Quintus.Link = function(Q) {
             Q.audio.play("hero_dying.mp3");
             this.p.sheet = 'dying';
             this.play('dying', 1);
+            console.log(this)
         },
 
         step: function(dt) {
