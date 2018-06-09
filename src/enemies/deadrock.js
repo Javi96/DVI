@@ -19,9 +19,9 @@ Quintus.Deadrock = function(Q) {
 
             this.play('walk_' + this.p.direction + '_foot');
 
-            if (Q.state.get(this.p.id_enemy)) {
+            /*if (Q.state.get(this.p.id_enemy)) {
                 this.destroy();
-            }
+            }*/
         }
     });
 

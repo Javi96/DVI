@@ -65,7 +65,7 @@ Quintus.SwordLink = function(Q) {
         },
 
         hit: function(col) {
-            col.obj.trigger('kicked');
+            col.obj.trigger('kicked', [this.p.direction]);
             //gameObject.p.getHit(this.p.dmg);
         },
 
@@ -102,7 +102,7 @@ Quintus.SwordLink = function(Q) {
 };
 
 function setSwordPos(p){
-    console.log("noooo")
+    
     switch(p.direction){
         case "_right":
             p.cx += 20;
