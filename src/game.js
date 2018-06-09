@@ -70,6 +70,6 @@ window.addEventListener('load', function() {
         Q.compileSheets('intro.png', 'intro.json');
         Q.compileSheets('dying.png', 'dying.json');
 
-        Q.stageScene('initialMenu');
+        Q.stageScene('boss');
     });
 });
