@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
         /**
          * Se ajusta la ventana del juego.
          */
-        .setup({ width: 450, heigth: 300 })
+        .setup({ width: 416, heigth: 300 })
         /**
          * Se le añade funcionalidad.
          */
@@ -73,6 +73,6 @@ window.addEventListener('load', function() {
         Q.compileSheets('intro.png', 'intro.json');
         Q.compileSheets('dying.png', 'dying.json');
 
-        Q.stageScene('boss');
+        Q.stageScene('initialMenu');
     });
 });

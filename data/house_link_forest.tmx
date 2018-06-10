@@ -98,6 +98,9 @@
    </properties>
   </tile>
  </tileset>
+ <tileset firstgid="1349" name="casa_link_bank.png" tilewidth="8" tileheight="8" tilecount="352" columns="22">
+  <image source="../images/house_link_forest_bank.png" width="176" height="128"/>
+ </tileset>
  <objectgroup name="Collider">
   <object id="16" gid="408" x="696" y="276" width="8" height="8">
    <properties>
@@ -24932,7 +24935,7 @@
     <property name="id_rupee" value="Rupee1"/>
    </properties>
   </object>
-  <object id="98" gid="807" x="845.333" y="384.333" width="8" height="14">
+  <object id="98" gid="807" x="844.666" y="379" width="8" height="14">
    <properties>
     <property name="id_rupee" value="Rupee6"/>
    </properties>
@@ -24942,7 +24945,7 @@
     <property name="id_rupee" value="Rupee8"/>
    </properties>
   </object>
-  <object id="100" gid="807" x="830.667" y="154.333" width="8" height="14">
+  <object id="100" gid="807" x="809.334" y="116.333" width="8" height="14">
    <properties>
     <property name="id_rupee" value="Rupee9"/>
    </properties>
@@ -24952,12 +24955,12 @@
     <property name="id_rupee" value="Rupee10"/>
    </properties>
   </object>
-  <object id="102" gid="807" x="795.333" y="63.6667" width="8" height="14">
+  <object id="102" gid="807" x="846" y="51.6667" width="8" height="14">
    <properties>
     <property name="id_rupee" value="Rupee11"/>
    </properties>
   </object>
-  <object id="103" gid="807" x="746" y="435.667" width="8" height="14">
+  <object id="103" gid="807" x="745.333" y="417.667" width="8" height="14">
    <properties>
     <property name="id_rupee" value="Rupee5"/>
    </properties>
@@ -24967,19 +24970,9 @@
     <property name="id_rupee" value="Rupee2"/>
    </properties>
   </object>
-  <object id="105" gid="807" x="492" y="413.667" width="8" height="14">
-   <properties>
-    <property name="id_rupee" value="Rupee3"/>
-   </properties>
-  </object>
   <object id="106" gid="807" x="554.667" y="199" width="8" height="14">
    <properties>
     <property name="id_rupee" value="Rupee4"/>
-   </properties>
-  </object>
-  <object id="108" gid="807" x="957.333" y="399.667" width="8" height="14">
-   <properties>
-    <property name="id_rupee" value="Rupee7"/>
    </properties>
   </object>
  </objectgroup>
