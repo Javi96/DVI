@@ -1,5 +1,11 @@
 Quintus.Collider = function(Q) {
+    /*
+     * Clase que define los collider que permiten el cambio de mapas.
+     */
     Q.Sprite.extend('Collider', {
+        /*
+         * Creación de los objetos collider (por defecto es una lámpara pero es invisible).   
+         */
         init: function(p) {
             this._super(p, {
                 asset: 'item_lamp.png',
@@ -9,10 +15,11 @@ Quintus.Collider = function(Q) {
             });
             this.on('sensor', this, 'sensor');
         },
-
+        /*
+         * Sensor que carga el mapa cuando se ha chocado con un collider.  
+         */
         sensor: function(col) {
             if (this.p.sensor) {
-                //animacion pantalla negra
                 Q.audio.stop();
                 Q.clearStages();
                 Q.stageScene('hud');
