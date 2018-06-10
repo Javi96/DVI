@@ -1,4 +1,10 @@
 Quintus.EnemyKilled = function(Q) {
+
+    /**
+     * Clase auxiliar que contiene
+     * la animación de un enemigo muerto
+     */
+
     Q.Sprite.extend('EnemyKilled', {
         init: function(p) {
             this._super(p, {
