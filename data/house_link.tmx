@@ -2789,7 +2789,7 @@
   </object>
  </objectgroup>
  <objectgroup name="Link">
-  <object id="89" gid="6847" x="96.8636" y="46.5455" width="28" height="28"/>
+  <object id="89" gid="6847" x="97.3636" y="59.5455" width="28" height="28"/>
   <object id="90" gid="6412" x="103.818" y="108.909" width="16" height="24"/>
  </objectgroup>
 </map>
