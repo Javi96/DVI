@@ -1,12 +1,15 @@
 # DVI
 
-Descripción
+Nuestro proyecto es una versión reducida de The Legend of Zelda. La historia es independiente de la de cualquier título de la saga, a pesar de que sí nos hemos inspirado en ella a la hora de desarrollarlo.
 
 ## Introducción
 
-Poner aquí como funciona el juego
+El aspecto general de nuestro juego ha tomado como base el título The Legend of Zelda: A Link to the Past. Consta de tres partes diferenciables: La casa de Link, el bosque y el castillo. El juego comenzará desde la casa de Link, donde el jugador ya dispondrá de la espada para atacar. Tras un paseo por el bosque, lleno de rupias y enemigos, Link llegará al castillo. Allí tendrá lugar la batalla final contra Ganon y sus esbirros.
 
 ## Diseño del juego
+
+El objetivo principal del juego consiste en acabar con Ganon y salvar a la princesa Zelda y a todo el reino.
+Link dispone de tres vidas, y perderá una cada vez que un enemigo le ataque. 
 
 ## Diseño de la implementación
 
