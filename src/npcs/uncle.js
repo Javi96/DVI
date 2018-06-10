@@ -7,32 +7,18 @@ Quintus.Uncle = function(Q) {
                 sprite: 'uncleAnim',
                 gravity: 0,
                 dead: false,
-                dialog: ["Link, you must save the princess.",
-                    "*cof cof* I can't move anymore"
-                ],
-                specDialog: "I feel so tired..."
+                continue: true,
+                dialog: ["Link, you must\nsave the princess.",
+                    "*cof cof*\nI can't move anymore.",
+                    "I feel so tired..."
+                ]
             });
-            this.add('defaultNPC, animation, tween');
-            this.on('talk', this, 'talk');
+            this.add('defaultNPC, animation');
         },
 
         step: function(dt){
             this.play('stand');
         },
-
-        talk: function() {
-            if (!this.p.dead) {
-                for (let i in this.p.dialog) {
-                    Q.state.set('dialog', this.p.dialog[i]);
-                    Q.stageScene('talking');
-                }
-                this.p.dead = true;
-            } else {
-                Q.state.set('dialog', this.p.specDialog);
-                Q.stageScene('talking');
-            }
-            //Q.clearStage(2);           
-        }
 
     });
 

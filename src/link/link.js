@@ -5,6 +5,7 @@ Quintus.Link = function(Q) {
             this._super(p, {
                 sheet: 'link',
                 sprite: 'linkAnim',
+                gravity: 0,
                 stepDistance: 16, // should be tile size
                 stepDelay: 0.2, // seconds to delay before next step
                 points: [
@@ -17,6 +18,9 @@ Quintus.Link = function(Q) {
                 collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_CHEST | Q.SPRITE_COLLIDER | Q.SPRITE_RUPEE | Q.SPRITE_NPC,
                 invulnerabilityTime: 1,
                 invulnerability: false,
+                talking: false,
+                talkingNext: 0,
+                talkingNPC: 0,
             });
             this.add('stepControls, animation');
             this.on('hit', 'hit');
@@ -28,6 +32,9 @@ Quintus.Link = function(Q) {
             Q.audio.stop();
             Q.clearStages();
             Q.stageScene('endGame');
+            //this.p.sheet = 'link';
+            //this.p.stepDistance = 16;
+            //Q.audio.play('forest.mp3');
         },
 
         hit: function(col) {
@@ -51,7 +58,13 @@ Quintus.Link = function(Q) {
                     col.obj.sensor();
                     break;
                 case Q.SPRITE_NPC:
-                    col.obj.trigger('sensor');
+                    if(!this.p.talking){
+                        this.p.talking = true;
+                        this.p.stepDistance = 0;
+                        this.p.talkingNPC = col.obj;
+                        this.children[0].destroy();
+                        col.obj.trigger('sensor');
+                    }
                     break;
             }
         },
@@ -62,33 +75,47 @@ Quintus.Link = function(Q) {
             Q.audio.play("hero_dying.mp3");
             this.p.sheet = 'dying';
             this.play('dying', 1);
-            console.log(this)
         },
 
         step: function(dt) {
-            this.p.reloadSword -= dt;
-            var dir = 'walking';
-
-            if (Q.inputs.up) {
-                dir += '_up';
-            } else if (Q.inputs.down) {
-                dir += '_down';
-            }
-            if (Q.inputs.left) {
-                dir += '_left';
-            } else if (Q.inputs.right) {
-                dir += '_right';
-            }
-            if (dir !== 'walking') {
-                this.play(dir);
-            }
-            if (this.p.invulnerability) {
-                this.p.invulnerabilityTime -= dt;
-                if (this.p.invulnerabilityTime < 0) {
-                    this.p.invulnerability = false;
+            if(this.p.talking){
+                this.p.talkingNext += dt;
+                if(Q.inputs.confirm && this.p.talkingNext > 0.3){
+                    this.p.talkingNext = 0;
+                    if(this.p.talkingNPC.p.continue){
+                        this.p.talkingNPC.trigger('talk');
+                    }else{
+                        this.p.stepDistance = 16;
+                        this.stage.insert(new Q.Sword(), this);
+                        this.p.talkingNPC.trigger('endTalk', this);
+                    }
                 }
+
+            }else{
+                this.p.reloadSword -= dt;
+                var dir = 'walking';
+
+                if (Q.inputs.up) {
+                    dir += '_up';
+                } else if (Q.inputs.down) {
+                    dir += '_down';
+                }
+                if (Q.inputs.left) {
+                    dir += '_left';
+                } else if (Q.inputs.right) {
+                    dir += '_right';
+                }
+                if (dir !== 'walking') {
+                    this.play(dir);
+                }
+                if (this.p.invulnerability) {
+                    this.p.invulnerabilityTime -= dt;
+                    if (this.p.invulnerabilityTime < 0) {
+                        this.p.invulnerability = false;
+                    }
+                }
+                this.stage.collide(this);
             }
-            this.stage.collide(this);
         }
     });
 

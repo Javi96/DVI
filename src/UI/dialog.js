@@ -5,7 +5,7 @@ Quintus.Dialog = function(Q) {
                 asset: 'dialog_box.png',
                 type: Q.SPRITE_UI,
                 x: Q.width / 2,
-                y: Q.height - 100
+                y: Q.height - 80
             });
         }
     });

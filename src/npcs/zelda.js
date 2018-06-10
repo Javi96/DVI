@@ -7,27 +7,29 @@ Quintus.Zelda = function(Q) {
                 sprite: 'zeldaAnim',
                 gravity: 0,
                 type: Q.SPRITE_NONE,
-                dialog: ["Thank you, Link! You saved me!",
-                    "Now Hyrule will live in peace forever."
+                continue: true,
+                dialog: ["Thank you, Link!\nYou saved me!",
+                    "Now Hyrule will\nlive in peace forever.",
+                    "And that would be impossible\nwithout our developers:",
+                    "Lidia Concepción\nJavier Cortés",
+                    "Pedro D. González\nManuel Hidalgo",
+                    "Thanks for playing!\n . . .",
+                    "You may not understand it\nbut they are great people."
                 ]
             });
             this.add('defaultNPC, animation, tween');
         },
 
         step: function(dt) {
-            if (Q.state.get('end')) {
-                this.play('walking');
-                this.animate({ y: p.y + 100 }, 3, { delay: 2 });
-                this.trigger('sensor');
-            }
+            this.play('stand');
+            
         }
-
 
     });
 
     //corregir en cambio de sheet
     Q.animations('zeldaAnim', {
-        'walking': { frames: [48, 49], rate: 1 / 8, next: 'stand' },
+        //'walking': { frames: [48, 49], rate: 1 / 8, next: 'stand' },
         'stand': { frames: [48] }
     });
 };

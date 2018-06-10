@@ -16,7 +16,7 @@ Quintus.RupeeCount = function(Q) {
         init: function(p) {
             this._super(p, {
                 label: 'x ' + Q.state.get('score'),
-                x: Q.width - 70,
+                x: Q.width - 50,
                 y: 10,
                 color: 'white',
                 size: 18

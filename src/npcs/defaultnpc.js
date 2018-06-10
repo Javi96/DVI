@@ -2,7 +2,9 @@ Quintus.DefaultNPC = function(Q) {
     Q.component('defaultNPC', {
         defaults: {
             gravity: 0,
-            sensor: true
+            sensor: true,
+            count: 0,
+            continue: false,
         },
 
         added: function() {
@@ -12,6 +14,7 @@ Quintus.DefaultNPC = function(Q) {
             this.entity.add('animation, tween');
             this.entity.on('sensor', this, 'sensor');
             this.entity.on('talk', this, 'talk');
+            this.entity.on('endTalk', this, 'endTalk');
         },
 
         sensor: function() {
@@ -25,10 +28,19 @@ Quintus.DefaultNPC = function(Q) {
 
         talk: function(){
             var p = this.entity.p;
-            for (let i in p.dialog) {
-                Q.state.set('dialog', p.dialog[i]);
-                Q.stageScene('talking');    
+            Q.state.set('dialog', p.dialog[p.count]);
+            Q.stageScene('talking');
+            p.count++;
+            if(p.count >= p.dialog.length){
+                p.count = 0;
+                p.continue = false;
             }
+        },
+
+        endTalk: function(obj){
+            obj.p.talking = false; 
+            this.entity.p.continue = true;           
+            Q.clearStage(2);
         }
     });
 };
