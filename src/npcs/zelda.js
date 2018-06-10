@@ -16,28 +16,24 @@ Quintus.Zelda = function(Q) {
                     "You may not understand it\nbut they are great people."
                 ]
             });
-            this.add('defaultNPC, animation, tween');
+            this.add('defaultNPC');
             this.on('endTalk', this, 'endTalk');
         },
 
         step: function(dt) {
             this.play('stand');
-            
         },
 
-        endTalk: function(obj){
-            obj.p.talking = false; 
+        endTalk: function(obj) {
+            obj.p.talking = false;
             Q.clearStage(1);
             Q.clearStage(2);
             Q.stageScene('wingame');
-
         }
-
     });
 
     //corregir en cambio de sheet
     Q.animations('zeldaAnim', {
-        //'walking': { frames: [48, 49], rate: 1 / 8, next: 'stand' },
         'stand': { frames: [0] }
     });
 };
