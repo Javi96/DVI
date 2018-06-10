@@ -15,9 +15,9 @@ Quintus.ZeldaMap = function(Q) {
 
         stage.add('viewport').follow(player, { x: true, y: true }, {
             minY: 0,
-            maxY: 464,
+            maxY: 450,
             minX: 0,
-            maxX: 496,
+            maxX: 416,
         });
         Q.audio.play('forest.mp3', { loop: true });
     });
