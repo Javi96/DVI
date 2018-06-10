@@ -36,6 +36,8 @@ Quintus.LoadDefaultEnemy = function(Q) {
             var obj = this.entity.stage.insert(new Q.EnemyKilled({ x: this.entity.p.x, y: this.entity.p.y }));
             Q.state.inc('score', this.entity.p.score);
             Q.state.set(this.entity.p.id_enemy, true);
+            if(this.entity.destroyEffect)
+                this.entity.destroyEffect();
             this.entity.destroy();
         }, 
         stun: function(direction){

@@ -10,8 +10,6 @@ Quintus.Fire = function(Q) {
                 target: undefined,
                 vx: 0,
                 vy: 0,
-                x: 200,               
-                y: 275,
                 lifeTime: 8,
                 delay:1,
             })
