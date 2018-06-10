@@ -1,0 +1,10 @@
+{
+    "stairStand":
+    {
+        "sx": 0,
+        "sy": 0,
+        "tileW": 95,
+        "tileH": 32,
+        "frames": 1
+    }
+}

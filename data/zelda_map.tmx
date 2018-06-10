@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="52" height="57" tilewidth="8" tileheight="8" infinite="0" nextobjectid="8">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="52" height="57" tilewidth="8" tileheight="8" infinite="0" nextobjectid="10">
  <tileset firstgid="1" name="zelda_bank.png" tilewidth="8" tileheight="8" tilecount="242" columns="22">
   <image source="../images/zelda_bank.png" width="176" height="88"/>
  </tileset>
@@ -60,8 +60,16 @@
  <tileset firstgid="687" name="interior_1_bank.png" tilewidth="8" tileheight="8" tilecount="264" columns="22">
   <image source="../images/interior_1_bank.png" width="176" height="96"/>
  </tileset>
- <tileset firstgid="951" name="alttp" tilewidth="8" tileheight="8" tilecount="4096" columns="64">
+ <tileset firstgid="951" name="alttp" tilewidth="32" tileheight="32" tilecount="256" columns="16">
   <image source="../images/alttp.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="1207" name="zelda_npc" tilewidth="16" tileheight="23" tilecount="1" columns="1">
+  <image source="../images/zelda_npc.png" width="16" height="23"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Zelda"/>
+   </properties>
+  </tile>
  </tileset>
  <objectgroup name="collider">
   <object id="1" gid="246" x="191.438" y="432" width="8" height="8">
@@ -5096,9 +5104,9 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="138"/>
-   <tile gid="138"/>
-   <tile gid="137"/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile gid="74"/>
    <tile gid="75"/>
    <tile gid="57"/>
@@ -5150,7 +5158,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="139"/>
+   <tile/>
    <tile gid="80"/>
    <tile gid="81"/>
    <tile gid="62"/>
@@ -5202,7 +5210,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="139"/>
+   <tile/>
    <tile gid="74"/>
    <tile gid="75"/>
    <tile gid="57"/>
@@ -5566,7 +5574,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="139"/>
+   <tile/>
    <tile gid="80"/>
    <tile gid="81"/>
    <tile gid="62"/>
@@ -5618,7 +5626,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="139"/>
+   <tile/>
    <tile gid="74"/>
    <tile gid="75"/>
    <tile gid="57"/>
@@ -5659,18 +5667,18 @@
    <tile gid="180"/>
    <tile gid="179"/>
    <tile gid="180"/>
-   <tile gid="137"/>
-   <tile gid="138"/>
-   <tile gid="138"/>
-   <tile gid="138"/>
-   <tile gid="138"/>
-   <tile gid="138"/>
-   <tile gid="138"/>
-   <tile gid="138"/>
-   <tile gid="138"/>
-   <tile gid="138"/>
-   <tile gid="138"/>
-   <tile gid="137"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile gid="80"/>
    <tile gid="81"/>
    <tile gid="62"/>
@@ -5711,7 +5719,7 @@
    <tile gid="186"/>
    <tile gid="185"/>
    <tile gid="186"/>
-   <tile gid="139"/>
+   <tile/>
    <tile gid="75"/>
    <tile gid="74"/>
    <tile gid="75"/>
@@ -5763,7 +5771,7 @@
    <tile gid="194"/>
    <tile gid="193"/>
    <tile gid="194"/>
-   <tile gid="139"/>
+   <tile/>
    <tile gid="81"/>
    <tile gid="80"/>
    <tile gid="81"/>
@@ -5815,7 +5823,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="139"/>
+   <tile/>
    <tile gid="75"/>
    <tile gid="74"/>
    <tile gid="75"/>
@@ -5867,7 +5875,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="139"/>
+   <tile/>
    <tile gid="81"/>
    <tile gid="80"/>
    <tile gid="81"/>
@@ -5919,7 +5927,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="137"/>
+   <tile/>
    <tile gid="206"/>
    <tile gid="205"/>
    <tile gid="206"/>
@@ -6045,6 +6053,9 @@
  </layer>
  <objectgroup name="link">
   <object id="4" gid="676" x="200" y="400" width="16" height="24"/>
+ </objectgroup>
+ <objectgroup name="zelda">
+  <object id="8" gid="1207" x="199.727" y="134.682" width="16" height="23"/>
  </objectgroup>
  <layer name="door" width="52" height="57">
   <properties>

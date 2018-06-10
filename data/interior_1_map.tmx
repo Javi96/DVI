@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="62" height="57" tilewidth="8" tileheight="8" infinite="0" nextobjectid="12">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="62" height="57" tilewidth="8" tileheight="8" infinite="0" nextobjectid="30">
  <tileset firstgid="1" name="interior_1_bank.png" tilewidth="8" tileheight="8" tilecount="264" columns="22">
   <image source="../images/interior_1_bank.png" width="176" height="96"/>
  </tileset>
@@ -70,6 +70,14 @@
   <tile id="9">
    <properties>
     <property name="Class" value="Ganon"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="961" name="stairs" tilewidth="95" tileheight="32" tilecount="1" columns="1">
+  <image source="../images/stairs.png" width="95" height="32"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="stair"/>
    </properties>
   </tile>
  </tileset>
@@ -10772,4 +10780,11 @@
    <tile/>
   </data>
  </layer>
+ <objectgroup name="tmpWall">
+  <object id="28" gid="961" x="201.5" y="152" width="95" height="32">
+   <properties>
+    <property name="collision" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

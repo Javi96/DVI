@@ -12,7 +12,7 @@ Quintus.BossMap = function(Q) {
             player.p.y = stage.options.yLink;
         }
         var sword = stage.insert(new Q.Sword(), player);
-
+        //stage.insert(new Q.stair({x:201,y:152}));
         stage.add('viewport').follow(player, { x: true, y: true }, {
             minY: 0,
             maxY: 464,

@@ -16,11 +16,13 @@ Quintus.LoadDefaultEnemy = function(Q) {
             this.entity.on('dead', this, 'dead');
         },
 
-        kicked: function(direction) {
+        kicked: function(enemy, direction) {
             if (this.entity.p.invicible < 0) {
                 this.entity.p.invicible = this.entity.p.invicibleTime;
                 this.entity.p.hp--;
-                this.stun(direction);
+                if(enemy=='ganonAnim'){
+                    this.stun(direction);
+                }
                 if (this.entity.p.hp == 0) {
                     Q.audio.play('enemy_killed.mp3');
                     console.log('dead');

@@ -7,7 +7,7 @@ Quintus.Ganon = function(Q) {
                 sheet: 'ganonWalk',
                 sprite: 'ganonAnim', 
                 score: 100,
-                hp: 1,
+                hp: 3,
                 invokeFireTime: 0,
                 hideousLaughter:false,
             });
@@ -40,7 +40,9 @@ Quintus.Ganon = function(Q) {
         },
 
         destroyEffect: function(){
-            fire = Q('fire')   
+            stair = Q('stair').first();
+            stair.destroy();
+            fire = Q('fire');  
             for(f of fire.items){
                 f.destroy();
             }

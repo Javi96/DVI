@@ -4,8 +4,8 @@ Quintus.Fire = function(Q) {
         init: function(p) {
             this._super(p, {
                 asset: "explosion.png",
-                collisionMask: Q.SPRITE_PLAYER,
-                type: 128,
+                collisionMask: Q.SPRITE_PLAYER | Q.SPRITE_WALL | Q.SPRITE_FIRE,
+                type: Q.SPRITE_FIRE,
                 gravity:0,
                 target: undefined,
                 vx: 0,

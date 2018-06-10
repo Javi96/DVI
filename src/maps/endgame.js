@@ -24,8 +24,7 @@ Quintus.EndGame = function(Q) {
                 Q.audio.stop();
                 Q.clearStages();
                 Q.state.reset({ score: 0, lives: 3, maxLives: 3 });
-                Q.stageScene('hud');
-                Q.stageScene('houseLinkMap');
+                Q.stageScene('initialMenu');
                 confirm = false;
             }
         });
