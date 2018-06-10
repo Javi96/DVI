@@ -23,9 +23,9 @@ Quintus.Soldier = function(Q) {
         step: function(dt) {
             this.p.invicible -= dt;
 
-            if (Q.state.get(this.p.id_enemy)) {
+            /*if (Q.state.get(this.p.id_enemy)) {
                 this.destroy();
-            }
+            }*/
             this.check();
         },
 

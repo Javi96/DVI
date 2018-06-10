@@ -15,9 +15,10 @@ Quintus.Rupee = function(Q) {
             this.play('live');
         },
         sensor: function() {
+            this.destroy();
             Q.state.inc('score', 1);
             Q.state.set(this.p.id_rupee, true);
-            this.destroy();
+            
         },
         step: function(dt) {
             if (Q.state.get(this.p.id_rupee)) {
