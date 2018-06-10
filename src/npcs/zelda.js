@@ -29,7 +29,7 @@ Quintus.Zelda = function(Q) {
             obj.p.talking = false; 
             Q.clearStage(1);
             Q.clearStage(2);
-            Q.stageScene('endGame');
+            Q.stageScene('wingame');
 
         }
 

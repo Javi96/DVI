@@ -8,12 +8,11 @@ window.addEventListener('load', function() {
          * del juego.
          */
         .include('Sprites, Scenes, Input, 2D, Anim, Touch, UI, TMX, Audio')
-        .include('ZeldaMap, BossMap, Hud, CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame')
-        .include('Link, SwordLink')
+        .include('ZeldaMap, BossMap, Hud, CastleMap, HouseLinkMap, HouseLinkForestMap, InitialMenu, EndGame, WinGame')        .include('Link, SwordLink')
         .include('LoadDefaultEnemy, Ganon, Deadrock, Soldier, EnemyKilled, Fire')
         .include('DefaultNPC, Uncle, Zelda, Guard')
         .include('Item, Chest, Rupee, Stair')
-        .include('Collider, Intro, GameOver, Talking')
+        .include('Collider, Intro, GameOver, winGame, Talking')
         .include('Heart, RupeeCount, Dialog')
         /**
          * Se ajusta la ventana del juego.
@@ -41,7 +40,7 @@ window.addEventListener('load', function() {
      * Cargamos los ficheros que necesitamos para el juego.
      */
     var confirm = false;
-    var screen = 'intro.png, intro.json, end_game.png';
+    var screen = 'intro.png, intro.json, end_game.png, win_game.png';
     var maps = 'zelda_map.tmx, interior_1_map.tmx, house_link.tmx, house_link_forest.tmx, castle_map.tmx';
 
     var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json, dying.png, dying.json';
