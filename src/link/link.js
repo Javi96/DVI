@@ -38,6 +38,7 @@ Quintus.Link = function(Q) {
         },
 
         hit: function(col) {
+            console.log(col);
             switch (col.obj.p.type) {
                 case Q.SPRITE_ENEMY:
                     if (!this.p.invulnerability) {
