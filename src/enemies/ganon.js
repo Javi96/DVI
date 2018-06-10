@@ -10,6 +10,7 @@ Quintus.Ganon = function(Q) {
                 hp: 3
             });
             this.add('defaultEnemy');
+            this.on('invokeFire', 'invokeFire');
         },
         step: function(dt) {
             this.p.invicible -= dt;
@@ -26,7 +27,13 @@ Quintus.Ganon = function(Q) {
                 this.stage.insert(new Q.Deadrock({x:150,y:400}));
                 this.stage.insert(new Q.Deadrock({x:325,y:400}));
             }
+        },
+
+        kicked: function(){
+            this.stage.insert(new Q.fire());
+            
         }
+
     });
 
     Q.animations('ganonAnim', {
