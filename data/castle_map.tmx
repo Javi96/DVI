@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="8" tileheight="8" infinite="0" nextobjectid="171">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="8" tileheight="8" infinite="0" nextobjectid="173">
  <tileset firstgid="1" name="castle_bank.png" tilewidth="8" tileheight="8" tilecount="506" columns="22">
   <image source="../images/castle_bank.png" width="176" height="184"/>
  </tileset>
@@ -92,6 +92,14 @@
  </tileset>
  <tileset firstgid="1002" name="casa_link_bank.png" tilewidth="8" tileheight="8" tilecount="352" columns="22">
   <image source="../images/house_link_forest_bank.png" width="176" height="128"/>
+ </tileset>
+ <tileset firstgid="1354" name="alttp" tilewidth="24" tileheight="32" tilecount="336" columns="21">
+  <image source="../images/alttp.png" width="512" height="512"/>
+  <tile id="210">
+   <properties>
+    <property name="Class" value="Guard"/>
+   </properties>
+  </tile>
  </tileset>
  <objectgroup name="collider" offsetx="28" offsety="-4.66667">
   <object id="90" gid="510" x="672" y="1024" width="8" height="8">
@@ -33145,6 +33153,7 @@
  </objectgroup>
  <objectgroup name="Link">
   <object id="10" gid="940" x="839.916" y="995.75" width="16" height="24"/>
+  <object id="171" gid="1564" x="693" y="985" width="24" height="32"/>
  </objectgroup>
  <layer name="Door" width="128" height="128">
   <properties>
