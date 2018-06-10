@@ -29,7 +29,7 @@ Ganon: Jefe final del juego. Al ser atacado, además de volverse invulnerable, s
 Objetos: Link podrá interactuar con ellos por choque. Las rupias aumentan el contador de puntuación en 1 y están distribuidas por todo el mapa. Los cofres también pueden contener rupias, además de objetos que aumentarán la puntuación en 3.
 ```
 ```
-NPCs: Link podrá dialogar con ellos por choque. Los diálogos varían en función del personaje y para todos ellos, se avanza pulsando el botón ENTER. Entre los personajes disponibles, están el tío de Link, los soldados, (decidir si meter alguno más), y la princesa Zelda.
+NPCs: Link podrá dialogar con ellos por choque. Los diálogos varían en función del personaje y para todos ellos, se avanza pulsando el botón ENTER. Entre los personajes disponibles, están el tío de Link, los soldados y la princesa Zelda.
 ```
 ```
 Mapas y pantallas: Todos los mapas incluyen colisionadores de forma que no todas las zonas del mapa son accesibles, ya sea por los mismos elementos del mapa (árboles, paredes) o por la reducción del juego original para nuestra versión. Link podrá viajar de una zona a otra atravesando el límite de una zona y teletransportándose a la siguiente.
@@ -55,78 +55,54 @@ Items: Contiene los cofres, que se "abren" mediante un sensor, los objetos que p
 ```
 ```
 Link: Contiene la misma clase Link y la espada. En Link.js se encuentran todos los métodos para el manejo del personaje: Las colisiones diferenciadas según el objeto con el que choque, los step para controlar las animaciones de movimiento y el diálogo, y la animación de muerte.
-La clase Sword se crea siempre asociada a Link, de forma que se muevan a la vez. También contiene step  
+La clase Sword se crea siempre asociada a Link, de forma que se muevan a la vez. También contiene step para las animaciones y detecta cuándo ha colisionado con un enemigo.
 ```
 ```
-Cosa 1
+Maps: Aquí están todos los mapas utilizados en el juego, a excepción de InitialMenu y Endgame, que se encargan con la interacción de las pantallas de carga y final.
 ```
 ```
-Cosa 1
+NPCs: Contiene los npcs utilizados, junto con el componente Defaultnpc. Éste controla el sensor para que detecten que el jugador intenta hablar con ellos, controla los diálogos y la finalización de la conversación. En el caso de Zelda, al finalizar la conversación se reinicia el juego, ya que se ha cumplido la condición de victoria.
 ```
 ```
-Cosa 1
+UI: Contiene los elementos que no interaccionan con el personaje como tal y el HUD. Los diálogos constan del recuadro en el que aparecen. Los corazones son el indicador de número de vidas y, junto con el contador de rupias, se incluyen en el HUD, de forma que el jugador tenga la información siempre disponible.
 ```
 ```
-Cosa 1
-```
-```
-Cosa 1
+Utils: Aquí se encuentran los elementos que no encajan en ninguna de las carpetas anteriores. Entre ellas se encuentra el collider, que permite saltar entre escenas, la animación de la pantalla inicial, y la muestra de los diálogos.
 ```
 
 ## Equipo de trabajo y reparto de tareas
 
-### Prerrequisitos
-
-Listar las cosas que hay que tener instaladas para poder jugar
+La mayoría de documentos han sido creados y modificados de forma conjunta por varios autores, ya que no ha habido una organización específica a la hora de repartir tareas. 
 
 ```
-Cosa 1
+Lidia Concepción: 19
 ```
-
-### Installing
-
-guias paso a paso para la instalacion aqui
-
-Pasos 1
-
 ```
-pasito 1
+Javier Cortés: 28
 ```
-
-Paso n
-
 ```
-pasito n
+Pedro David González: 25
 ```
-
-demo aqui de lo que deberia salir
-
-## Tecnologias
-
-* [c1](https://github.com/Javi96/DVI/blob/master/README.md) - descripcion 1
-* [c2](https://github.com/Javi96/DVI/blob/master/README.md) - descripcion 2
-* [c3](https://github.com/Javi96/DVI/blob/master/README.md) - descripcion 3
-
-## Contribuciones
-
- [cosas.md](https://github.com/Javi96/DVI/blob/master/README.md) 
+```
+Manuel Hidalgo: 28
+```
 
 ## Fuentes y referencias
 
+Fuentes:
+```
+Sprites: https://www.spriters-resource.com/snes/legendofzeldaalinktothepast/
+```
+```
+Sonidos: https://www.sounds-resource.com/snes/legendofzeldaalinktothepast/sound/7573/
+```
+```
+Pantalla inicio: Google Images.
+```
+```
+Pantalla final (game over): Google Images.
+Pantalla final (victoria): http://www.zeldaelements.net/images/games/a_link_to_the_past/ending/25.gif
+```
+
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
-## Autores
-
-* **autor1** - *trabajo inicial* - [PurpleBooth](https://github.com/)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
