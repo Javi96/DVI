@@ -1,5 +1,9 @@
 Quintus.Deadrock = function(Q) {
 
+    /**
+     * Creación de enemigo Deadrock con su movimiento
+     */
+    
     Q.Sprite.extend('Deadrock', {
         init: function(p) {
             this._super(p, {
@@ -16,12 +20,7 @@ Quintus.Deadrock = function(Q) {
         step: function(dt) {
             this.p.invicible -= dt;
             this.p.direction = (this.p.vx > 0) ? 'right' : 'left';
-
             this.play('walk_' + this.p.direction + '_foot');
-
-            /*if (Q.state.get(this.p.id_enemy)) {
-                this.destroy();
-            }*/
         }
     });
 

@@ -1,5 +1,8 @@
 Quintus.Fire = function(Q) {
 
+    /**
+     * Sprite que representa los ataques de fuego de Ganon
+     */
     Q.Sprite.extend('fire', {
         init: function(p) {
             this._super(p, {
@@ -16,6 +19,11 @@ Quintus.Fire = function(Q) {
             this.add('2d, aiBounce');
             this.p.target = (Q('Link').first()).p;
         },
+
+        /**
+         * Se define el rebote
+         * y la desaparición de las bolas de fuego
+         */
         step: function(dt) {
             if(this.p.delay - dt > 0)
                 this.p.delay -= dt;

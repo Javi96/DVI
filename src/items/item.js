@@ -1,4 +1,7 @@
 Quintus.Item = function(Q) {
+    /**
+     * Clase que representa un objeto
+     */
     Q.Sprite.extend('Item', {
         init: function(p) {
             this._super(p, {
@@ -6,9 +9,11 @@ Quintus.Item = function(Q) {
             });
             this.add('animation, tween');
         },
+        
         step: function(dt) {
             var get = function() {
                 this.play('picked_item.mp3');
+                Q.state.inc('score', 20);
                 if (Q.state.get(this.p.object)) {
                     Q.state.inc(this.p.object, 1);
                 } else {

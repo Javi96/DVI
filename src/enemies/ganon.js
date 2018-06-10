@@ -1,6 +1,9 @@
 var lock = true;
 Quintus.Ganon = function(Q) {
 
+    /**
+     * Clase de Ganon, enemigo final
+     */
     Q.Sprite.extend('Ganon', {
         init: function(p) {
             this._super(p, {
@@ -11,11 +14,14 @@ Quintus.Ganon = function(Q) {
                 invokeFireTime: 0,
                 hideousLaughter:false,
             });
-            this.add('defaultEnemy');
-            
+            this.add('defaultEnemy');            
             this.on('kicked', this, 'kicked');
             this.on('dead', this, 'dead');
         },
+
+        /**
+         * Se define el teletransporte y los ataques de fuego de Ganon
+         */
         step: function(dt) {
             this.p.invicible -= dt;
             if (!this.p.dead) {
@@ -26,8 +32,7 @@ Quintus.Ganon = function(Q) {
                 if(!Q('Deadrock').first() && !Q('Soldier').first()){
                     this.p.hideousLaughter = false;
                     this.p.y = 300
-                }
-                
+                }   
             }else{
                 if(this.p.invokeFireTime <= 0){
                     this.p.invokeFireTime = 1;
@@ -36,9 +41,11 @@ Quintus.Ganon = function(Q) {
                     this.p.invokeFireTime -= dt;
                 }
             }
-
         },
 
+        /**
+         * Al morir, se desbloquea el camino hasta Zelda y desaparecen las bolas de fuego
+         */
         destroyEffect: function(){
             stair = Q('stair').first();
             stair.destroy();
@@ -48,9 +55,12 @@ Quintus.Ganon = function(Q) {
             }
         },
 
+        /**
+         * Al ser atacado, Ganon libera su horda de enemigos
+         * y desaparecen sus ataques de fuego
+         */
         kicked: function(){        
-            if(!this.p.hideousLaughter)
-            {
+            if(!this.p.hideousLaughter){
                 this.p.hideousLaughter = true;
                 this.p.y=100;
                 this.stage.insert(new Q.Deadrock({x:150,y:250}));
@@ -60,7 +70,6 @@ Quintus.Ganon = function(Q) {
                 this.stage.insert(new Q.Deadrock({x:150,y:400}));
                 this.stage.insert(new Q.Deadrock({x:325,y:400}));
                 fire = Q('fire')
-                console.log(fire);
                 for(f of fire.items){
                     f.destroy();
                 }
