@@ -13,13 +13,12 @@ Quintus.Uncle = function(Q) {
                     "I feel so tired..."
                 ]
             });
-            this.add('defaultNPC, animation');
+            this.add('defaultNPC');
         },
 
-        step: function(dt){
+        step: function(dt) {
             this.play('stand');
         },
-
     });
 
     Q.animations('uncleAnim', {

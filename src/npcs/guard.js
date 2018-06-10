@@ -3,22 +3,20 @@ Quintus.Guard = function(Q) {
     Q.Sprite.extend('Guard', {
         init: function(p) {
             this._super(p, {
-                sheet: 'guard',
+                sheet: 'alttp',
                 sprite: 'guardAnim',
                 gravity: 0,
-                dialog: ["Please help us!"
-                ]
+                dialog: ["Please help us!"]
             });
-            this.add('defaultNPC, animation, tween');
+            this.add('defaultNPC');
         },
-        
-        step: function(dt){
+
+        step: function(dt) {
             this.play('stand');
         }
-
     });
 
     Q.animations('guardAnim', {
-        'stand': { frames: [0] }
+        'stand': { frames: [210] }
     });
 };
