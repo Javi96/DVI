@@ -72,6 +72,6 @@ window.addEventListener('load', function() {
         Q.compileSheets('intro.png', 'intro.json');
         Q.compileSheets('dying.png', 'dying.json');
 
-        Q.stageScene('castleMap');
+        Q.stageScene('initialMenu');
     });
 });
