@@ -103,6 +103,3 @@ Pantalla inicio: Google Images.
 Pantalla final (game over): Google Images.
 Pantalla final (victoria): http://www.zeldaelements.net/images/games/a_link_to_the_past/ending/25.gif
 ```
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
