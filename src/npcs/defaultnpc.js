@@ -26,20 +26,20 @@ Quintus.DefaultNPC = function(Q) {
             }
         },
 
-        talk: function(){
+        talk: function() {
             var p = this.entity.p;
             Q.state.set('dialog', p.dialog[p.count]);
             Q.stageScene('talking');
             p.count++;
-            if(p.count >= p.dialog.length){
+            if (p.count >= p.dialog.length) {
                 p.count = 0;
                 p.continue = false;
             }
         },
 
-        endTalk: function(obj){
-            obj.p.talking = false; 
-            this.entity.p.continue = true;           
+        endTalk: function(obj) {
+            obj.p.talking = false;
+            this.entity.p.continue = true;
             Q.clearStage(2);
         }
     });

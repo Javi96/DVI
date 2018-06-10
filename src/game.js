@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
 
     var link = 'link.png, link.json, loading.sword3.png, loading.sword3.json, sword.sword3.png, sword.sword3.json, dying.png, dying.json';
     var enemies = 'enemy_ganon.png, enemy_ganon.json, enemy_deadrock.png, enemy_deadrock.json, enemy_soldier.png, enemy_soldier.json, enemy_killed.png, enemy_killed.json, explosion.png';
-    var npcs = 'uncle.png, uncle.json, zelda_npc.png, zelda.json'; //añadir png y json de Zelda y Guard
+    var npcs = 'uncle.png, uncle.json, zelda_npc.png, zelda.json, alttp.png, alttp.json';
     var items = 'item_potion.png, item_lamp.png, item_chest.png, item_chest.json, stairs.png, stair.json';
     var UI = 'hearts.png, heart.json, dialog_box.png, rupee_icon.png';
     var sounds = 'forest.mp3, sword1.mp3, chest_open.mp3, picked_item.mp3, title_screen.mp3, hero_dying.mp3, hero_hurt.mp3, heart.mp3, game_over.mp3, rupee_counter.mp3, enemy_hurt.mp3, enemy_killed.mp3, message_letter.mp3, message_end.mp3';
@@ -64,7 +64,7 @@ window.addEventListener('load', function() {
 
         Q.compileSheets('uncle.png', 'uncle.json');
         Q.compileSheets('zelda_npc.png', 'zelda.json');
-        //Q.compileSheets('guard.png', 'guard.json');
+        Q.compileSheets('alttp.png', 'alttp.json');
 
         Q.compileSheets('item_chest.png', 'item_chest.json');
         Q.compileSheets('hearts.png', 'heart.json');
@@ -72,6 +72,6 @@ window.addEventListener('load', function() {
         Q.compileSheets('intro.png', 'intro.json');
         Q.compileSheets('dying.png', 'dying.json');
 
-        Q.stageScene('initialMenu');
+        Q.stageScene('castleMap');
     });
 });
