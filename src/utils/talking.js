@@ -1,5 +1,7 @@
 Quintus.Talking = function(Q){
-
+    /*
+     * Clase que define los diálogos de los npc.
+     */
     Q.scene('talking', function(stage) {
         var d = stage.insert(new Q.Dialog());
 

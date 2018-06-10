@@ -20,11 +20,11 @@ Para explicar las mecánicas del juego nos centraremos en los distintos elemento
 
 * **Enemigos**: Su movimiento y PVs varían en función del tipo de enemigo que sea. Todos pierden 1 PV cuando son golpeados por un ataque de la espada. Los que tienen varios PVs, también disponen del estado de invulnerabilidad anteriormente mencionado. El jugador recibirá puntos extra, medidos en rupias, si acaba con ellos.
 
-* **Deadrocks**: Su movimiento es lineal y horizontal. Tienen 1 PV y proporcionan 5 rupias extra.
+  * **Deadrocks**: Su movimiento es lineal y horizontal. Tienen 1 PV y proporcionan 5 rupias extra.
 
-* **Soldados**: Se mantienen quietos hasta que Link pasa cerca y comienzan a perseguirle. Al ser atacados, retroceden y entran en invulnerabilidad. Tienen 2 PVs y proporcionan 10  rupias extra.
+  * **Soldados**: Se mantienen quietos hasta que Link pasa cerca y comienzan a perseguirle. Al ser atacados, retroceden y entran en invulnerabilidad. Tienen 2 PVs y proporcionan 10  rupias extra.
 
-* **Ganon**: Jefe final del juego. Al ser atacado, además de volverse invulnerable, se teletransporta a otro lugar de la sala y envía a sus esbirros (deadrocks y soldados) para atacar a Link. También dispara bolas de fuego. Acabar con él permite abrir la sala en la que está presa la princesa y es necesario para ganar la partida. Tiene 3 PVs y proporciona 100 rupias extra.
+  * **Ganon**: Jefe final del juego. Al ser atacado, además de volverse invulnerable, se teletransporta a otro lugar de la sala y envía a sus esbirros (deadrocks y soldados) para atacar a Link. También dispara bolas de fuego. Acabar con él permite abrir la sala en la que está presa la princesa y es necesario para ganar la partida. Tiene 3 PVs y proporciona 100 rupias extra.
 
 * **Objetos**: Link podrá interactuar con ellos por choque. Las rupias aumentan el contador de puntuación en 1 y están distribuidas por todo el mapa. Los cofres también pueden contener rupias, además de objetos que aumentarán la puntuación en 3.
 
