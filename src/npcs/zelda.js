@@ -6,7 +6,6 @@ Quintus.Zelda = function(Q) {
                 sheet: 'zelda',
                 sprite: 'zeldaAnim',
                 gravity: 0,
-                type: Q.SPRITE_NONE,
                 continue: true,
                 dialog: ["Thank you, Link!\nYou saved me!",
                     "Now Hyrule will\nlive in peace forever.",
@@ -18,11 +17,20 @@ Quintus.Zelda = function(Q) {
                 ]
             });
             this.add('defaultNPC, animation, tween');
+            this.on('endTalk', this, 'endTalk');
         },
 
         step: function(dt) {
             this.play('stand');
             
+        },
+
+        endTalk: function(obj){
+            obj.p.talking = false; 
+            Q.clearStage(1);
+            Q.clearStage(2);
+            Q.stageScene('endGame');
+
         }
 
     });
@@ -30,6 +38,6 @@ Quintus.Zelda = function(Q) {
     //corregir en cambio de sheet
     Q.animations('zeldaAnim', {
         //'walking': { frames: [48, 49], rate: 1 / 8, next: 'stand' },
-        'stand': { frames: [48] }
+        'stand': { frames: [0] }
     });
 };

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="8" tileheight="8" infinite="0" nextobjectid="169">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="128" height="128" tilewidth="8" tileheight="8" infinite="0" nextobjectid="171">
  <tileset firstgid="1" name="castle_bank.png" tilewidth="8" tileheight="8" tilecount="506" columns="22">
   <image source="../images/castle_bank.png" width="176" height="184"/>
  </tileset>
@@ -83,6 +83,15 @@
  </tileset>
  <tileset firstgid="1000" name="casa_link_bank.png" tilewidth="8" tileheight="8" tilecount="352" columns="22">
   <image source="../images/house_link_forest_bank.png" width="176" height="128"/>
+ </tileset>
+ <tileset firstgid="1352" name="item_chest_small" tilewidth="16" tileheight="16" tilecount="2" columns="2">
+  <image source="../images/item_chest_small.png" width="32" height="16"/>
+  <tile id="0">
+   <properties>
+    <property name="Class" value="Chest"/>
+    <property name="id_chest" value="Chest1"/>
+   </properties>
+  </tile>
  </tileset>
  <objectgroup name="collider">
   <object id="90" gid="510" x="672" y="1024" width="8" height="8">
@@ -315,9 +324,6 @@
    </properties>
   </object>
  </objectgroup>
- <imagelayer name="background">
-  <image source="../images/castle.png" width="1024" height="1024"/>
- </imagelayer>
  <layer name="ShoeBox Tile Grab" width="128" height="128">
   <properties>
    <property name="collision" type="bool" value="true"/>
@@ -11379,7 +11385,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="52"/>
+   <tile gid="68"/>
    <tile gid="53"/>
    <tile gid="59"/>
    <tile gid="54"/>
@@ -11388,7 +11394,7 @@
    <tile gid="55"/>
    <tile gid="59"/>
    <tile gid="61"/>
-   <tile gid="62"/>
+   <tile gid="80"/>
    <tile/>
    <tile/>
    <tile/>
@@ -11401,7 +11407,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="52"/>
+   <tile gid="68"/>
    <tile gid="53"/>
    <tile gid="59"/>
    <tile gid="54"/>
@@ -11410,7 +11416,7 @@
    <tile gid="55"/>
    <tile gid="59"/>
    <tile gid="61"/>
-   <tile gid="62"/>
+   <tile gid="80"/>
    <tile/>
    <tile/>
    <tile/>
@@ -11507,7 +11513,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="68"/>
+   <tile gid="5"/>
    <tile gid="69"/>
    <tile gid="6"/>
    <tile gid="6"/>
@@ -11516,7 +11522,7 @@
    <tile gid="6"/>
    <tile gid="6"/>
    <tile gid="79"/>
-   <tile gid="80"/>
+   <tile gid="7"/>
    <tile/>
    <tile/>
    <tile/>
@@ -11529,7 +11535,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="68"/>
+   <tile gid="5"/>
    <tile gid="69"/>
    <tile gid="6"/>
    <tile gid="6"/>
@@ -11538,7 +11544,7 @@
    <tile gid="6"/>
    <tile gid="6"/>
    <tile gid="79"/>
-   <tile gid="80"/>
+   <tile gid="7"/>
    <tile/>
    <tile/>
    <tile/>
@@ -11635,16 +11641,16 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="5"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="7"/>
+   <tile gid="301"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="302"/>
    <tile/>
    <tile/>
    <tile/>
@@ -11657,16 +11663,16 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="5"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="6"/>
-   <tile gid="7"/>
+   <tile gid="301"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="22"/>
+   <tile gid="302"/>
    <tile/>
    <tile/>
    <tile/>
@@ -11763,16 +11769,6 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="301"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="302"/>
    <tile/>
    <tile/>
    <tile/>
@@ -11785,16 +11781,26 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="301"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="302"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -28155,6 +28161,16 @@
    <tile/>
    <tile/>
    <tile/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
    <tile/>
    <tile/>
    <tile/>
@@ -28167,26 +28183,16 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
+   <tile gid="1010"/>
    <tile/>
    <tile/>
    <tile/>
@@ -33165,6 +33171,20 @@
    </properties>
   </object>
   <object id="161" gid="985" x="503" y="414" width="18" height="28"/>
+ </objectgroup>
+ <objectgroup name="chest">
+  <object id="169" gid="1352" x="143.765" y="192.144" width="16" height="16">
+   <properties>
+    <property name="id_chest" value="Chest3"/>
+    <property name="object" value="potion"/>
+   </properties>
+  </object>
+  <object id="170" gid="1352" x="896" y="175.636" width="16" height="16">
+   <properties>
+    <property name="id_chest" value="Chest4"/>
+    <property name="object" value="potion"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="Link">
   <object id="10" gid="940" x="832.583" y="999.75" width="16" height="24"/>

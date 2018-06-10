@@ -37,6 +37,11 @@ Quintus.Chest = function(Q) {
                 Q.state.set(this.p.id_chest, true);
                 this.p.sensor = false;
                 var obj = this.stage.insert(new Q.Item({ object: this.p.object, x: this.p.x, y: this.p.y - 10 }));
+                var lives = Q.state.get('lives');
+                console.log(lives, Q.state.get('maxLives'))
+                if(lives < Q.state.get('maxLives')){
+                    Q.state.inc('lives',1);
+                }
             }
         },
         /**

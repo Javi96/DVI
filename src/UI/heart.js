@@ -17,19 +17,24 @@ Quintus.Heart = function(Q) {
         },
 
         lives: function(lives) {
-            if (this.p.num === lives) {
+            console.log('he entrado', lives);
+            //if (this.p.num === lives) {
+                console.log('corazon ', this.p.num);
                 if (this.p.actualLives > lives) {
-                    this.play('getHit');
+                    if (this.p.num === lives) {
+                        this.play('getHit');
+                    }
                 } else if (this.p.actualLives < lives) {
-                    if (maxLives >= lives) {
+                    console.log('he entrado otra vez');
+                    if (Q.state.get('maxLives') >= lives) {
                         this.play('getHeart');
                     } else {
-                        Q.state.set('lives', maxLives);
+                        Q.state.set('lives', Q.state.get('maxLives'));
                     }
                     Q.audio.play('heart.mp3');
                 }
                 this.p.actualLives = lives;
-            }
+            //}
         }
     });
 

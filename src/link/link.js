@@ -15,7 +15,7 @@ Quintus.Link = function(Q) {
                     [-8, 12]
                 ],
                 type: Q.SPRITE_PLAYER,
-                collisionMask: Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_CHEST | Q.SPRITE_COLLIDER | Q.SPRITE_RUPEE | Q.SPRITE_NPC,
+                collisionMask: Q.SPRITE_FIRE | Q.SPRITE_WALL | Q.SPRITE_DEFAULT | Q.SPRITE_ENEMY | Q.SPRITE_CHEST | Q.SPRITE_COLLIDER | Q.SPRITE_RUPEE | Q.SPRITE_NPC,
                 invulnerabilityTime: 1,
                 invulnerability: false,
                 talking: false,
@@ -40,6 +40,8 @@ Quintus.Link = function(Q) {
         hit: function(col) {
             console.log(col);
             switch (col.obj.p.type) {
+                case Q.SPRITE_FIRE:
+                    col.obj.destroy();
                 case Q.SPRITE_ENEMY:
                     if (!this.p.invulnerability) {
                         this.p.invulnerabilityTime = 1;
@@ -67,6 +69,9 @@ Quintus.Link = function(Q) {
                         col.obj.trigger('sensor');
                     }
                     break;
+                case Q.SPRITE_WALL:
+                    break;
+                
             }
         },
 
