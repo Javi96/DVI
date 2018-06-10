@@ -1,5 +1,8 @@
 Quintus.Soldier = function(Q) {
 
+    /**
+     * Creación de enemigo soldado
+     */
     Q.Sprite.extend('Soldier', {
         init: function(p) {
             this._super(p, {
@@ -20,15 +23,16 @@ Quintus.Soldier = function(Q) {
             this.on('moveX', this, 'moveX');
             this.on('moveY', this, 'moveY');
         },
+
         step: function(dt) {
             this.p.invicible -= dt;
-
-            /*if (Q.state.get(this.p.id_enemy)) {
-                this.destroy();
-            }*/
             this.check();
         },
 
+        /**
+         * Comportamiento de soldado.
+         * Se mantiene quieto hasta que viene link
+         */
         check: function() {
             this.p.vx = 0;
             this.p.vy = 0;
@@ -47,6 +51,10 @@ Quintus.Soldier = function(Q) {
                 this.play('stand_' + this.p.direction);
             }
         },
+
+        /**
+         * Se define el movimiento de seguimiento del soldado
+         */
         move: function() {
             var objective = this.p.trackClass.p;
             var dir = this.p.direction;
