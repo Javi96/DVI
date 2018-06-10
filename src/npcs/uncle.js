@@ -1,5 +1,7 @@
 Quintus.Uncle = function(Q) {
-
+    /**
+     * Tío de nuestro personaje Link.
+     */
     Q.Sprite.extend('Uncle', {
         init: function(p) {
             this._super(p, {

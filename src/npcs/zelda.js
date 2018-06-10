@@ -1,5 +1,7 @@
 Quintus.Zelda = function(Q) {
-
+    /**
+     * Princesa Zelda.
+     */
     Q.Sprite.extend('Zelda', {
         init: function(p) {
             this._super(p, {
@@ -23,7 +25,9 @@ Quintus.Zelda = function(Q) {
         step: function(dt) {
             this.play('stand');
         },
-
+        /**
+         * Se gana la partida
+         */
         endTalk: function(obj) {
             obj.p.talking = false;
             Q.clearStage(1);
@@ -32,7 +36,6 @@ Quintus.Zelda = function(Q) {
         }
     });
 
-    //corregir en cambio de sheet
     Q.animations('zeldaAnim', {
         'stand': { frames: [0] }
     });

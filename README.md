@@ -71,6 +71,10 @@ Pedro David González: 25
 Manuel Hidalgo: 28
 ```
 
+## Demo del juego
+
+[![Demo del juego](doc/img/game.gif)](https://www.youtube.com/watch?v=zN_m4QDK7i4&feature=youtu.be)
+
 ## Fuentes y referencias
 
 **Sprites**: [https://www.spriters-resource.com/snes/legendofzeldaalinktothepast/](https://www.spriters-resource.com/snes/legendofzeldaalinktothepast/)

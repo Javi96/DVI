@@ -1,5 +1,8 @@
 Quintus.DefaultNPC = function(Q) {
     Q.component('defaultNPC', {
+        /**
+         * Valores por defecto de los NPCs.
+         */
         defaults: {
             gravity: 0,
             sensor: true,
@@ -7,6 +10,9 @@ Quintus.DefaultNPC = function(Q) {
             continue: false,
         },
 
+        /**
+         * Se añaden los módulos necesario y el type del sprite.
+         */
         added: function() {
             this.entity.p.type = Q.SPRITE_NPC;
             Q._defaults(this.entity.p, this.defaults);
@@ -16,7 +22,9 @@ Quintus.DefaultNPC = function(Q) {
             this.entity.on('talk', this, 'talk');
             this.entity.on('endTalk', this, 'endTalk');
         },
-
+        /**
+         * Se genera una conversación al chocar con ellos.
+         */
         sensor: function() {
             if (this.entity.p.sensor) {
                 this.entity.play('stand');
@@ -25,7 +33,9 @@ Quintus.DefaultNPC = function(Q) {
                 Q.audio.play('message_end.mp3');
             }
         },
-
+        /**
+         * Conversación del NPC.
+         */
         talk: function() {
             var p = this.entity.p;
             Q.state.set('dialog', p.dialog[p.count]);
@@ -36,7 +46,9 @@ Quintus.DefaultNPC = function(Q) {
                 p.continue = false;
             }
         },
-
+        /**
+         * Fin de la conversación-
+         */
         endTalk: function(obj) {
             obj.p.talking = false;
             this.entity.p.continue = true;
