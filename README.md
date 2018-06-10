@@ -97,7 +97,7 @@ Sprites: https://www.spriters-resource.com/snes/legendofzeldaalinktothepast/
 Sonidos: https://www.sounds-resource.com/snes/legendofzeldaalinktothepast/sound/7573/
 ```
 ```
-Pantalla inicio: Google Images.
+Pantalla inicio: https://giphy.com/gifs/snes-loz-alttp-ImTtlWXHwOZ9e
 ```
 ```
 Pantalla final (game over): Google Images.
